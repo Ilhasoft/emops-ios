@@ -14,6 +14,7 @@ class URModerationViewController: UITabBarController, UITabBarControllerDelegate
     
     let storyViewController:URStoriesTableViewController = URStoriesTableViewController(filterStoriesToModerate: true)
     let moderatorViewController:URModeratorTableViewController = URModeratorTableViewController()
+    let missionTableViewController:URMissionTableViewController = URMissionTableViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class URModerationViewController: UITabBarController, UITabBarControllerDelegate
         self.appDelegate.requestPermissionForPushNotification(UIApplication.sharedApplication())
         
         setupViewControllers()
-        tabBarController(self, didSelectViewController: storyViewController)
+        tabBarController(self, didSelectViewController: missionTableViewController)
         
     }
 
@@ -37,10 +38,13 @@ class URModerationViewController: UITabBarController, UITabBarControllerDelegate
         moderatorViewController.title = "label_country_moderator".localized
         moderatorViewController.tabBarItem.image = UIImage(named: "manageMod")
         
+        missionTableViewController.title = "Missions".localized
+        missionTableViewController.tabBarItem.image = UIImage(named: "manageMod")
+        
         if URUser.activeUser()!.masterModerator != nil && URUser.activeUser()!.masterModerator == true {
-            self.viewControllers = [storyViewController,moderatorViewController]
+            self.viewControllers = [missionTableViewController,storyViewController,moderatorViewController]
         }else {
-            self.viewControllers = [storyViewController]
+            self.viewControllers = [missionTableViewController,storyViewController]
         }
     }
     
@@ -56,6 +60,11 @@ class URModerationViewController: UITabBarController, UITabBarControllerDelegate
         }
         
         if viewController is URModeratorTableViewController {
+            self.title = viewController.title
+            self.navigationItem.rightBarButtonItems = nil
+        }
+        
+        if viewController is URMissionTableViewController {
             self.title = viewController.title
             self.navigationItem.rightBarButtonItems = nil
         }

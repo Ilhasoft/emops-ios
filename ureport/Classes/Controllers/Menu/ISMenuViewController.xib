@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ISMenuViewController" customModule="ureport" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ISMenuViewController" customModule="ereport" customModuleProvider="target">
             <connections>
                 <outlet property="bgImageProfile" destination="yvP-AP-Xxj" id="SOf-Yw-r29"/>
                 <outlet property="btLogin" destination="xTl-xs-ITI" id="4yC-4d-P1o"/>
@@ -16,7 +16,7 @@
                 <outlet property="roundedView" destination="rOj-Kw-ybm" id="ODv-qi-LG7"/>
                 <outlet property="tableView" destination="sKs-yi-mz0" id="DkP-4y-re7"/>
                 <outlet property="topView" destination="foF-kR-CZQ" id="EYH-qw-VnJ"/>
-                <outlet property="txtSwitchCountryProgram" destination="ZuV-lb-hm5" id="TKY-Kz-nXc"/>
+                <outlet property="txtSwitchMission" destination="ZuV-lb-hm5" id="cCD-TM-tee"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -58,7 +58,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="237" height="145"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </view>
-                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="145" id="gjV-8T-Q91"/>
                             </constraints>
@@ -66,7 +66,7 @@
                                 <blurEffect style="dark"/>
                             </vibrancyEffect>
                         </visualEffectView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOj-Kw-ybm" customClass="ISRoundedView" customModule="ureport" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOj-Kw-ybm" customClass="ISRoundedView" customModule="ereport" customModuleProvider="target">
                             <rect key="frame" x="12" y="49" width="60" height="60"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zcx-bM-adt">
@@ -167,7 +167,7 @@
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E87-J9-uw0">
                     <rect key="frame" x="0.0" y="519" width="237" height="1"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="9mW-vm-xhr"/>
                     </constraints>

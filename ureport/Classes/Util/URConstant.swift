@@ -16,7 +16,7 @@ struct URConstant {
     static let isIpad = UIDevice.currentDevice().userInterfaceIdiom == .Pad
     
     struct Color {
-        static let PRIMARY = UIColor(rgba: "#42b6e7")
+        static let PRIMARY = UIColor(rgba: "#00adef")
         static let PRIMARY_DARK = UIColor(rgba: "#3aadda")
         static let DARK_BLUE = UIColor(rgba: "#5398C7")
         static let TRANSLUCENT_COVER = UIColor(rgba: "#6000")
@@ -144,8 +144,8 @@ struct URConstant {
     }
     
     struct Key {
-        static let COUNTRY_PROGRAM_CHANNEL = "COUNTRY_PROGRAM_CHANNEL_"
-        static let COUNTRY_PROGRAM_TOKEN = "COUNTRY_PROGRAM_TOKEN_"
+        static let MISSION_CHANNEL = "MISSION_CHANNEL_"
+        static let MISSION_TOKEN = "MISSION_TOKEN_"
     }
     
 }

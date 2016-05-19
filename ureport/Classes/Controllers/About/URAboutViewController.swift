@@ -34,7 +34,7 @@ class URAboutViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        URNavigationManager.setupNavigationBarWithCustomColor(URCountryProgramManager.activeCountryProgram()!.themeColor!)
+        URNavigationManager.setupNavigationBarWithCustomColor(URMissionManager.activeMission()!.themeColor!)
         
         self.navigationController!.setNavigationBarHidden(false, animated: false)        
         
@@ -63,13 +63,13 @@ class URAboutViewController: UIViewController {
     //MARK: Button Events
     
     @IBAction func btTwitterTapped(sender: AnyObject) {
-        if let twitter =  URCountryProgramManager.activeCountryProgram()?.twitter {
+        if let twitter =  URMissionManager.activeMission()?.twitter {
             UIApplication.sharedApplication().openURL(NSURL(string: "http://www.twitter.com/\(twitter)")!)
         }
     }
     
     @IBAction func btFacebookTapped(sender: AnyObject) {
-        if let facebook =  URCountryProgramManager.activeCountryProgram()?.facebook {
+        if let facebook =  URMissionManager.activeMission()?.facebook {
             UIApplication.sharedApplication().openURL(NSURL(string: "http://www.facebook.com/\(facebook)")!)
         }
     }

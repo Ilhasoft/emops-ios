@@ -25,8 +25,8 @@ class URChatMessageManager: NSObject {
     
     func getMessages(chatRoom:URChatRoom) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()?.code)
             .childByAppendingPath(URChatMessageManager.path())
             .childByAppendingPath(chatRoom.key)
             .observeEventType(FEventType.ChildAdded, withBlock: { (snapshot) in
@@ -50,8 +50,8 @@ class URChatMessageManager: NSObject {
     
     class func getLastMessage(key:String,completion:(URChatMessage?) -> Void) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()?.code)
             .childByAppendingPath(self.path())
             .childByAppendingPath(key)
             .queryLimitedToLast(1)
@@ -68,8 +68,8 @@ class URChatMessageManager: NSObject {
         URGCMManager.notifyChatMessage(chatRoom, chatMessage: chatMessage)
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()?.code)
             .childByAppendingPath(self.path())
             .childByAppendingPath(chatRoom.key)
             .childByAutoId()
@@ -85,8 +85,8 @@ class URChatMessageManager: NSObject {
     
     class func getTotalMessages(chatRoom:URChatRoom,completion:(Int)-> Void) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()?.code)
             .childByAppendingPath(self.path())
             .childByAppendingPath(chatRoom.key)
             .observeSingleEventOfType(FEventType.Value, withBlock: { (snapshot:FDataSnapshot!) -> Void in

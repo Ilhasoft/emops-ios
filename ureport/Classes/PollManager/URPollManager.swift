@@ -36,8 +36,8 @@ class URPollManager: NSObject {
         pollIndex = 0
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URPollManager.path())
             .observeEventType(FEventType.ChildAdded, withBlock: { (snapshot) in
                 if let delegate = self.delegate {
@@ -59,8 +59,8 @@ class URPollManager: NSObject {
     func getPollsResults(pollKey:String!) {
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URPollManager.pathForPollResult())
             .childByAppendingPath(pollKey)
             .observeEventType(FEventType.ChildAdded, withBlock: { (snapshot) in

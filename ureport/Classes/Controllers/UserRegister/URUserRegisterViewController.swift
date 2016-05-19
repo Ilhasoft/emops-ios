@@ -222,8 +222,8 @@ class URUserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPi
         user.country = countryISO3?.code
         user.state = self.txtState.text
         user.publicProfile = true
-        user.countryProgram = URCountryProgramManager.getCountryProgramByCountry(countryISO3!).code
-        URCountryProgramManager.setActiveCountryProgram(URCountryProgramManager.getCountryProgramByCountry(countryISO3!))
+//        user.countryProgram = URMissionManager.getCountryProgramByCountry(countryISO3!).code
+        URMissionManager.setActiveMission(URMissionManager.missions[0])
         return user
     }
     
@@ -298,7 +298,7 @@ class URUserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPi
         
         if updateMode != nil && updateMode == true {
             self.country = URCountry(code: URCountry.getISO2CountryCodeByISO3Code(self.userInput!.country))
-            self.txtCountry.text = URCountryProgramManager.getCountryProgramByCountry(URCountry(code: self.userInput!.country)).name
+            self.txtCountry.text = self.country?.name
             self.countryISO3 = URCountry(code:URCountry.getISO3CountryCodeByISO2Code(self.country!.code!))
         }else{
             self.country = URCountry.getCurrentURCountry()

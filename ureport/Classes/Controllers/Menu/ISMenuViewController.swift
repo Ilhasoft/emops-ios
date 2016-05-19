@@ -17,19 +17,18 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var roundedView: ISRoundedView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var txtSwitchCountryProgram: UITextField!
+    @IBOutlet weak var txtSwitchMission: UITextField!
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var bgImageProfile: UIImageView!
     @IBOutlet weak var btLogin: UIButton!
         
-    var countryProgramChanged:URCountryProgram!
+    var missionChanged:URMission!
     var user:URUser!
     var appDelegate:AppDelegate!
     var menuList:[ISMenu] = []
     
-    var pickerCountryProgram:UIPickerView?
+    var pickerMission:UIPickerView?
 //    let countries:[URCountry]? = URCountry.getCountries(URCountryCodeType.ISO3) as? [URCountry]
-    let countryPrograms:[URCountryProgram] = URCountryProgramManager.getAvailableCountryPrograms()
     var country = URCountry()
     
     static let instance = ISMenuViewController(nibName:"ISMenuViewController",bundle:nil)
@@ -52,15 +51,15 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
         setupMenu()
         setupTableViewCell()
         setupGestureRecognizer()
-        self.txtSwitchCountryProgram.tintColor = UIColor.clearColor()
-        self.txtSwitchCountryProgram.textColor = URConstant.Color.PRIMARY
+        self.txtSwitchMission.tintColor = UIColor.clearColor()
+        self.txtSwitchMission.textColor = URConstant.Color.PRIMARY
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardHideNotification(_:)), name:   UIKeyboardWillHideNotification, object: nil);
         self.appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
     }    
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.topView.backgroundColor = URCountryProgramManager.activeCountryProgram()?.themeColor!
+        self.topView.backgroundColor = URMissionManager.activeMission()?.themeColor!
         loadUserInfo()
         
         let tracker = GAI.sharedInstance().defaultTracker
@@ -131,10 +130,6 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
                 storyModerationViewController.title = "stories_moderation".localized
                 URNavigationManager.setFrontViewController(URStoriesTableViewController(filterStoriesToModerate: true))
             }
-            else if URUserManager.isUserInYourOwnCountryProgram() == false {
-                UIAlertView(title: nil, message: "feature_without_permission".localized, delegate: self, cancelButtonTitle: "Ok").show()
-            }
-            
             break
         case .Logout:
             URUserLoginManager.logoutFromSocialNetwork()
@@ -161,16 +156,16 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return countryPrograms.count
+        return URMissionManager.missions.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return countryPrograms[row].name
+        return URMissionManager.missions[row].name
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        countryProgramChanged = self.countryPrograms[row] 
-        txtSwitchCountryProgram.text = countryProgramChanged.name!
+        missionChanged = URMissionManager.missions[row]
+        txtSwitchMission.text = missionChanged.name!
     }
     
     
@@ -197,14 +192,14 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func keyboardHideNotification(notification: NSNotification) {
-        if let countryProgram = countryProgramChanged {
-            checkIfIsADifferentCountryProgram(countryProgram)
+        if let mission = missionChanged {
+            checkIfIsADifferentCountryProgram(mission)
         }
     }
     
-    func checkIfIsADifferentCountryProgram(countryProgram:URCountryProgram) {
-        if URCountryProgramManager.activeCountryProgram()?.code != countryProgram.code {
-            URCountryProgramManager.setSwitchActiveCountryProgram(countryProgram)
+    func checkIfIsADifferentCountryProgram(mission:URMission) {
+        if URMissionManager.activeMission()?.code != mission.code {
+            URMissionManager.setSwitchActiveMission(mission)
             
             
             URNavigationManager.setupNavigationControllerWithMainViewController(URMainViewController())
@@ -216,13 +211,13 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
         
         self.btLogin.setTitle("login_now".localized, forState: UIControlState.Normal)
         
-        self.pickerCountryProgram = UIPickerView()
-        self.pickerCountryProgram!.backgroundColor = UIColor.whiteColor()
-        self.pickerCountryProgram!.dataSource = self
-        self.pickerCountryProgram!.delegate = self
-        self.pickerCountryProgram!.showsSelectionIndicator = true
-        self.txtSwitchCountryProgram.inputView = self.pickerCountryProgram
-        self.txtSwitchCountryProgram.attributedPlaceholder = NSAttributedString(string: "switch_country_program".localized, attributes: [NSForegroundColorAttributeName: URConstant.Color.PRIMARY])
+        self.pickerMission = UIPickerView()
+        self.pickerMission!.backgroundColor = UIColor.whiteColor()
+        self.pickerMission!.dataSource = self
+        self.pickerMission!.delegate = self
+        self.pickerMission!.showsSelectionIndicator = true
+        self.txtSwitchMission.inputView = self.pickerMission
+        self.txtSwitchMission.attributedPlaceholder = NSAttributedString(string: "switch_country_program".localized, attributes: [NSForegroundColorAttributeName: URConstant.Color.PRIMARY])
         
         self.btLogin.layer.cornerRadius = 4
         self.roundedView.layer.borderWidth = 2
@@ -275,7 +270,7 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
             setupUserImageAsDefault()
         }
         
-        self.txtSwitchCountryProgram.text = (URCountryProgramManager.activeCountryProgram()!.name!)
+        self.txtSwitchMission.text = (URMissionManager.activeMission()!.name!)
         
     }
     

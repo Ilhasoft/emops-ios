@@ -78,8 +78,8 @@ class URChatRoomManager: NSObject {
     class func getByKey(key:String,completion:(URChatRoom?) -> Void) {
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()?.code)
             .childByAppendingPath(path())
             .childByAppendingPath(key)
             .observeSingleEventOfType(FEventType.Value, withBlock: { snapshot in
@@ -130,8 +130,8 @@ class URChatRoomManager: NSObject {
     
     class func save(chatRoom:URChatRoom, members:[URUser], completion:(URChatRoom) -> Void) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.path())
             .childByAutoId()
             .setValue(chatRoom.toDictionary(), withCompletionBlock: { (error:NSError!, firebase: Firebase!) -> Void in
@@ -161,8 +161,8 @@ class URChatRoomManager: NSObject {
     class func update(chatRoom:URChatRoom, newMembers:[URUser], completion:(URChatRoom) -> Void) {    
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.path())
             .childByAppendingPath(chatRoom.key)
             .setValue(chatRoom.toDictionary(), withCompletionBlock: { (error:NSError!, firebase: Firebase!) -> Void in
@@ -195,8 +195,8 @@ class URChatRoomManager: NSObject {
     func getOpenGroups() {
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URChatRoomManager.path())
             .queryOrderedByChild("privateAccess")
             .queryEqualToValue(false)
@@ -233,8 +233,8 @@ class URChatRoomManager: NSObject {
     
     class func blockUser(chatRoomKey:String) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URChatRoomManager.path())
             .childByAppendingPath(chatRoomKey)
             .updateChildValues(["blocked" : URUser.activeUser()!.key])
@@ -242,8 +242,8 @@ class URChatRoomManager: NSObject {
     
     class func unblockUser(chatRoomKey:String) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URChatRoomManager.path())
             .childByAppendingPath(chatRoomKey)
             .childByAppendingPath("blocked")

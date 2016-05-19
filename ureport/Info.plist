@@ -5,11 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>U-Report</string>
+	<string>E-Report</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>in.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -39,7 +39,7 @@
 			<string>FacebookURL</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1021658627874726</string>
+				<string>fb1078731758831595</string>
 			</array>
 		</dict>
 		<dict>
@@ -57,11 +57,11 @@
 	<key>CFBundleVersion</key>
 	<string>2</string>
 	<key>FacebookAppID</key>
-	<string>1021658627874726</string>
-	<key>FacebookDisplayName</key>
-	<string>U-Report</string>
+	<string>1078731758831595</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
+	<key>FacebookDisplayName</key>
+	<string>E-Report</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

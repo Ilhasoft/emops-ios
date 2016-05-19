@@ -52,7 +52,7 @@ class URStoriesTableViewController: UITableViewController, URStoryManagerDelegat
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController!.setNavigationBarHidden(false, animated: true)
-        URNavigationManager.setupNavigationBarWithCustomColor(URCountryProgramManager.activeCountryProgram()!.themeColor!)
+        URNavigationManager.setupNavigationBarWithCustomColor(URMissionManager.activeMission()!.themeColor!)
         
         let tracker = GAI.sharedInstance().defaultTracker
         tracker.set(kGAIScreenName, value: "Stories")
@@ -94,7 +94,7 @@ class URStoriesTableViewController: UITableViewController, URStoryManagerDelegat
     
     //MARK: MenuDelegateMethods
     
-    func countryProgramDidChanged(countryProgram: URCountryProgram) {
+    func countryProgramDidChanged(countryProgram: URMission) {
         storyList.removeAll()
         storyManager.getStories(false)
     }
@@ -202,8 +202,8 @@ class URStoriesTableViewController: UITableViewController, URStoryManagerDelegat
     
     func loadNews() {
         
-        if let org = URCountryProgramManager.activeCountryProgram()!.org {
-            let url = "\(URCountryProgramManager.activeCountryProgram()!.ureportHostAPI)\(org)"
+        if let org = URMissionManager.activeMission()!.org {
+            let url = "\(URMissionManager.activeMission()!.ureportHostAPI)\(org)"
             Alamofire.request(.GET, url, headers: nil).responseObject({ (response:URAPIResponse<URNews>?, error:ErrorType?) -> Void in
                 if let response = response {
                     self.newsList = response.results

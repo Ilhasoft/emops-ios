@@ -71,7 +71,7 @@ class URRapidProContactUtil: NSObject {
         URRapidProContactUtil.addGenderGroup(user)
         URRapidProContactUtil.addAgeGroup(user)
         
-        groupList.append(URCountryProgramManager.getCountryProgramByCountry(URCountry(code: user.country)).groupName)
+//        groupList.append(URMissionManager.getCountryProgramByCountry(URCountry(code: user.country)).groupName)
         groupList.append(GROUP_APP_UREPORT)
         
         let rootDictionary = NSMutableDictionary()

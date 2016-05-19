@@ -35,10 +35,12 @@ class URStoryManager: NSObject {
     }
     
     func getStories(storiesToModerate:Bool) {
-                
+        
+        print(URMissionManager.activeMission()!.code)
+        
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(storiesToModerate == true ? URStoryManager.pathStoryModerate() : URStoryManager.path())
             .observeEventType(FEventType.ChildAdded, withBlock: { (snapshot) in
                 if let delegate = self.delegate {
@@ -72,8 +74,8 @@ class URStoryManager: NSObject {
     
     class func getStoryLikes(storyKey:String,completion:(likeCount:Int) -> Void) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.pathStoryLike())
             .childByAppendingPath(storyKey)
             .observeSingleEventOfType(FEventType.Value, withBlock: { snapshot in
@@ -83,8 +85,8 @@ class URStoryManager: NSObject {
     
     class func checkIfStoryWasLiked(storyKey:String,completion:(liked:Bool) -> Void) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.pathStoryLike())
             .childByAppendingPath(storyKey)
             .childByAppendingPath(URUser.activeUser()?.key)
@@ -95,8 +97,8 @@ class URStoryManager: NSObject {
     
     class func saveStoryLike(key:String) -> Void {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.pathStoryLike())
             .childByAppendingPath(key)
             .setValue([URUser.activeUser()!.key:true])
@@ -104,8 +106,8 @@ class URStoryManager: NSObject {
     
     class func removeStoryLike(key:String) -> Void {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.pathStoryLike())
             .childByAppendingPath(key)
             .childByAppendingPath(URUser.activeUser()!.key)
@@ -115,8 +117,8 @@ class URStoryManager: NSObject {
     class func saveStory(story:URStory,isModerator:Bool, completion:(Bool) -> Void) {
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(isModerator == true ? self.path() : self.pathStoryModerate())
             .childByAutoId()
             .setValue(story.toDictionary(), withCompletionBlock: { (error:NSError!, firebase: Firebase!) -> Void in
@@ -133,8 +135,8 @@ class URStoryManager: NSObject {
     class func setStoryAsPublished(story:URStory, completion:(finished:Bool) -> Void) {
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.path())
             .childByAppendingPath(story.key)
             .setValue(story.toDictionary(), withCompletionBlock: { (error:NSError!, firebase: Firebase!) -> Void in
@@ -145,8 +147,8 @@ class URStoryManager: NSObject {
             })
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.pathStoryModerate())
             .childByAppendingPath(story.key)
             .removeValue()
@@ -155,8 +157,8 @@ class URStoryManager: NSObject {
     class func setStoryAsDisapproved(story:URStory, completion:(finished:Bool) -> Void) {
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.pathStoryDisapproved())
             .childByAppendingPath(story.key)
             .setValue(story.toDictionary(), withCompletionBlock: { (error:NSError!, firebase: Firebase!) -> Void in
@@ -167,8 +169,8 @@ class URStoryManager: NSObject {
             })
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.pathStoryModerate())
             .childByAppendingPath(story.key)
             .removeValue()

@@ -71,16 +71,16 @@ class URUserManager: NSObject {
     
     class func setUserAsModerator(userKey:String) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URUserManager.pathUserModerator())
             .setValue([userKey:true])
     }
 
     class func removeModerateUser(userKey:String) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URUserManager.pathUserModerator())
             .childByAppendingPath(userKey)
             .removeValue()
@@ -162,8 +162,8 @@ class URUserManager: NSObject {
     class func checkIfUserIsCountryProgramModerator(key:String,completion:(Bool) -> Void){
 
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URUserManager.pathUserModerator())
             .childByAppendingPath(key)
             .observeSingleEventOfType(FEventType.Value, withBlock: { snapshot in                
@@ -178,7 +178,7 @@ class URUserManager: NSObject {
     
     class func getAllUserByCountryProgram(completion:([URUser]?) -> Void){
         
-        let countryProgram = URCountryProgramManager.activeCountryProgram()!.code!
+        let countryProgram = URMissionManager.activeMission()!.code!
         
         URFireBaseManager.sharedInstance()
             .childByAppendingPath(self.path())
@@ -204,8 +204,8 @@ class URUserManager: NSObject {
     class func getAllModertorUsers(completion:([String]?) -> Void){
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URUserManager.pathUserModerator())
             .observeSingleEventOfType(FEventType.Value, withBlock: { snapshot in
                 if ((snapshot != nil) && !(snapshot.value is NSNull)) {
@@ -350,7 +350,7 @@ class URUserManager: NSObject {
             (user!.moderator == true))) {
             return true
         }else if (featureNeedModeratorPermission == false){
-            return URUserManager.isUserInYourOwnCountryProgram()
+            return true
         }else {
             return false
         }
@@ -358,15 +358,6 @@ class URUserManager: NSObject {
     
     class func formatExtUserId(key:String) -> String {
         return key.stringByReplacingOccurrencesOfString(":", withString: "") .stringByReplacingOccurrencesOfString("-", withString: "")
-    }
-    
-    class func isUserInYourOwnCountryProgram() -> Bool {
-                
-         if URUser.activeUser()!.countryProgram == URCountryProgramManager.activeCountryProgram()?.code!{
-            return true
-        }else {
-            return false
-        }
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  URCountryProgram.swift
+//  URMission.swift
 //  ureport
 //
 //  Created by Daniel Amaral on 13/08/15.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class URCountryProgram: Serializable {
-    
+class URMission: Serializable {
+   
     var code:String!
     var themeColor:UIColor?
     var name:String!
@@ -38,7 +38,7 @@ class URCountryProgram: Serializable {
     
     //MARK: FireBase Methods
     class func path() -> String {
-        return "country_program"
+        return "mission"
     }
     
 }

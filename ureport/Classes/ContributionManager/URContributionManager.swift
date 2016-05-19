@@ -29,8 +29,8 @@ class URContributionManager: NSObject {
     func getContributions(storyKey:String!) {
                 
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URContributionManager.path())
             .childByAppendingPath(storyKey)
             .queryOrderedByChild("createdDate")
@@ -55,8 +55,8 @@ class URContributionManager: NSObject {
     func getPollContributions(pollkey:String!) {
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URContributionManager.pathPollContribution())
             .childByAppendingPath(pollkey)
             .queryOrderedByChild("createdDate")
@@ -80,8 +80,8 @@ class URContributionManager: NSObject {
     
     class func saveContribution(storyKey:String,contribution:URContribution,completion:(Bool!) -> Void) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URContributionManager.path())
             .childByAppendingPath(storyKey)
             .childByAutoId()
@@ -96,8 +96,8 @@ class URContributionManager: NSObject {
     
     class func savePollContribution(pollKey:String,contribution:URContribution,completion:(Bool!) -> Void) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URContributionManager.pathPollContribution())
             .childByAppendingPath(pollKey)
             .childByAutoId()
@@ -112,8 +112,8 @@ class URContributionManager: NSObject {
     
     class func getTotalContributions(storyKey:String,completion:(Int) -> Void) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URContributionManager.path())
             .childByAppendingPath(storyKey)
             .observeSingleEventOfType(FEventType.Value, withBlock: { snapshot in
@@ -127,8 +127,8 @@ class URContributionManager: NSObject {
     
     class func removeContribution(storyKey:String,contributionKey:String) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URContributionManager.path())
             .childByAppendingPath(storyKey)
             .childByAppendingPath(contributionKey)
@@ -138,8 +138,8 @@ class URContributionManager: NSObject {
     
     class func removePollContribution(pollKey:String,contributionKey:String) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(URContributionManager.pathPollContribution())
             .childByAppendingPath(pollKey)
             .childByAppendingPath(contributionKey)

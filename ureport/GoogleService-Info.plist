@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>843441539089-a3ksd60vkbvg6v9kef20t8oi8u3hcsq9.apps.googleusercontent.com</string>
+	<string>766603912641-3ldi06s1h2aof47l7vh0hrsf7lq9r464.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.843441539089-a3ksd60vkbvg6v9kef20t8oi8u3hcsq9</string>
+	<string>com.googleusercontent.apps.766603912641-3ldi06s1h2aof47l7vh0hrsf7lq9r464</string>
 	<key>GCM_SENDER_ID</key>
-	<string>843441539089</string>
+	<string>766603912641</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>in.ureport</string>
+	<string>org.unicef.emops</string>
+	<key>PROJECT_ID</key>
+	<string>e-report-72c5b</string>
 	<key>IS_ADS_ENABLED</key>
 	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<true/>
-	<key>TRACKING_ID</key>
-	<string>UA-62089811-3</string>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
 	<false/>
 	<key>IS_GCM_ENABLED</key>
@@ -25,6 +25,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:843441539089:ios:8970e90be4c0795a</string>
+	<string>1:766603912641:ios:7b1306b690539dc3</string>
+	<key>TRACKING_ID</key>
+	<string>UA-62089811-3</string>
 </dict>
 </plist>

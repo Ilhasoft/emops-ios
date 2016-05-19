@@ -33,13 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
         NSUserDefaults.saveIncomingAvatarSetting(true)
         NSUserDefaults.saveOutgoingAvatarSetting(true)
         
-        URCountryProgramManager.deactivateSwitchCountryProgram()
+        URMissionManager.deactivateSwitchMission()
         Firebase.defaultConfig().persistenceEnabled = false
         setupGoogle()
         requestPermissionForPushNotification(application)
         setupGCM(application)
         setupAWS()
         createDirectoryToImageUploads()
+        
+        let missionManager = URMissionManager()
+        missionManager.getAvailableMissions()
         
         URReviewModeManager.checkIfIsInReviewMode { (reviewMode) -> Void in
             

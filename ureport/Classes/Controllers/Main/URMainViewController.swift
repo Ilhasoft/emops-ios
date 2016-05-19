@@ -56,7 +56,7 @@ class URMainViewController: UITabBarController, UITabBarControllerDelegate, URCl
         }
         
         setupViewControllers()
-        self.title = "U-Report"
+        self.title = "E-Report"
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -64,7 +64,7 @@ class URMainViewController: UITabBarController, UITabBarControllerDelegate, URCl
         
         URUserManager.reloadUserInfoWithCompletion { (finish) in }
         
-        URNavigationManager.setupNavigationBarWithCustomColor(URCountryProgramManager.activeCountryProgram()!.themeColor!)
+        URNavigationManager.setupNavigationBarWithCustomColor(URMissionManager.activeMission()!.themeColor!)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
         let tracker = GAI.sharedInstance().defaultTracker
@@ -103,7 +103,7 @@ class URMainViewController: UITabBarController, UITabBarControllerDelegate, URCl
         myChatsViewController.tabBarItem.image = UIImage(named: "icon_chats")
         
         if URUserManager.userHasPermissionToAccessTheFeature(false) == true {
-            self.viewControllers = [storiesTableViewController,closedPollViewController, myChatsViewController]
+            self.viewControllers = [storiesTableViewController,closedPollViewController]
             
             if chatRoomKey != nil {
                 
@@ -199,7 +199,7 @@ class URMainViewController: UITabBarController, UITabBarControllerDelegate, URCl
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
         
         if viewController is URStoriesTableViewController {
-            self.title = "U-Report"            
+            self.title = "E-Report"            
             if URUserManager.userHasPermissionToAccessTheFeature(false) == true {
                 self.navigationItem.rightBarButtonItems = nil
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: #selector(newStory))
@@ -212,7 +212,7 @@ class URMainViewController: UITabBarController, UITabBarControllerDelegate, URCl
         }
         
         if viewController is URMyChatsViewController || viewController is URMyChatsIPadViewController {
-            self.title = "U-Report"
+            self.title = "E-Report"
             self.navigationItem.rightBarButtonItems = addRightBarButtons()
         }
         

@@ -6,7 +6,7 @@
   Copyright (c) 2015 ilhasoft. All rights reserved.
 */
 
-"app_name" = "U-Report";
+"app_name" = "E-Report";
 "login_email" = "Correo Electrónico";
 "login_password" = "Clave";
 "email" = "Correo Electrónico";
@@ -110,8 +110,8 @@
 "error_chat_create_individual" = "Ya tienes una habitación de chat con este usuario. No es posible duplicar.";
 "cancel_dialog_button" = "Cancelar";
 "label_action_notifications" = "Notificaciones";
-"about_content" = "U-Report es una herramienta gratis para la participación comunitaria, diseñada para abordar temas que le interesan a lxs jóvenes. Una vez que te registras pasas a ser un/a U-Reporter y puedes chatear con otrxs U-Reporters, contestar encuestas semanalmente, y enviar tus propias historias. Los resultados e ideas son luego compartidos con la comunidad de U-Report. Los temas de las encuestas incluyen HIV/Sida, brotes de enfermedades, paz, salud, educación, agua, higiene, empleo juvenil, y cualquiera que las personas quieran tratar. La información es después usada para conectar a las personas con sus representantes, mejorar los programas de UNICEF, y llamar la atención de los gobiernos, Naciones Unidas, organizaciones de la sociedad civil y autoridades en general, sobre temas de suma urgencia. Nuestro objetivo es que ellxs usen esta información. El registro es voluntario, y no hay costos asociados para lxs U-Reporters. Juntxs, lxs U-Reporters pueden crear cambios positivos internacionalmente, en su país, o comunidad.";
-"label_about_ureport" = "Acerca de U-Report";
+"about_content" = "E-Report es una herramienta gratis para la participación comunitaria, diseñada para abordar temas que le interesan a lxs jóvenes. Una vez que te registras pasas a ser un/a U-Reporter y puedes chatear con otrxs U-Reporters, contestar encuestas semanalmente, y enviar tus propias historias. Los resultados e ideas son luego compartidos con la comunidad de E-Report. Los temas de las encuestas incluyen HIV/Sida, brotes de enfermedades, paz, salud, educación, agua, higiene, empleo juvenil, y cualquiera que las personas quieran tratar. La información es después usada para conectar a las personas con sus representantes, mejorar los programas de UNICEF, y llamar la atención de los gobiernos, Naciones Unidas, organizaciones de la sociedad civil y autoridades en general, sobre temas de suma urgencia. Nuestro objetivo es que ellxs usen esta información. El registro es voluntario, y no hay costos asociados para lxs U-Reporters. Juntxs, lxs U-Reporters pueden crear cambios positivos internacionalmente, en su país, o comunidad.";
+"label_about_ureport" = "Acerca de E-Report";
 "about_subtitle" = "Tu voz\nImporta";
 "donation_subtitle" = "Cuando haces una donación";
 "label_make_donation_subtitle" = "Hacer una donación";
@@ -142,7 +142,7 @@
 "points_earning_close" = "Cerrar";
 "polls_previous_title" = "Encuesta previa";
 "switch_country_program" = "Cambiar de país";
-"about_title" = "Acerca de U-Report";
+"about_title" = "Acerca de E-Report";
 "label_unicef_ambassadors" = "Embajadores de UNICEF";
 "ambassadors_subtitle" = "Embajador de buena voluntad";
 "ambassadors_all_button" = "Ver todxs lxs embajadores de UNICEF";
@@ -169,7 +169,7 @@
 "label_data_confirmation" = "Confirmación de datos";
 "load_message_save_user" = "Guardando usuario...";
 "error_no_internet" = "Por favor conéctate a internet antes de continuar";
-"invite_contact_text" = "Te invito a chatear conmigo en la App de U-Report! Descárgala acá http://goo.gl/Xxyodt";
+"invite_contact_text" = "Te invito a chatear conmigo en la App de E-Report! Descárgala acá http://goo.gl/Xxyodt";
 "ureporters_selected_maximum" = "El número máximo de usuarios seleccionados es %d";
 "chat_private_media_permission_title" = "Media permitida";
 "search_title" = "Buscar";
@@ -184,7 +184,7 @@
 "error_choose_district" = "Selecciona distrito";
 "error_rapidpro" = "Ha ocurrido un error durante tu proceso de registro. Por favor  inténtalo más tarde.";
 "load_message_user_data" = "Cargando datos de usuario.";
-"summary_notification" = "U-Report";
+"summary_notification" = "E-Report";
 "hint_search_groups" = "Buscar grupos";
 "hint_search_chat_rooms" = "Buscar habitaciones de chat";
 "label_close_group" = "Cerrar grupo";
@@ -212,10 +212,10 @@
 "poll_question_latest_results" = "Resultado de encuestas anteriores";
 "view_title" = "Ver";
 "poll_response_hint" = "Haz click acá para responder";
-"poll_question_default_message" = "Esperar a próxima encuesta o enviar mensaje a U-Report más abajo.";
+"poll_question_default_message" = "Esperar a próxima encuesta o enviar mensaje a E-Report más abajo.";
 "main_chat" = "Chat";
 "title_open_groups" = "Seguir grupos";
-"description_open_groups" = "Ver lo que las comunidades de U-Report están hablando";
+"description_open_groups" = "Ver lo que las comunidades de E-Report están hablando";
 "title_see" = "Ver";
 "label_invite_contacts" = "Invitar contactos";
 "title_poll_question_no_login" = "Necesitas registrarte para contestar encuestas";
@@ -227,17 +227,17 @@
 "button_title_disapprove" = "Desaprobar";
 "button_title_publish" = "Publicar";
 "success_story_update_message" = "La historia fue actualizada exitosamente";
-"message_story_publish_warning" = "Tu historia ha sido enviada al equipo de U-Report. Chequea más tarde para verla publicada.";
+"message_story_publish_warning" = "Tu historia ha sido enviada al equipo de E-Report. Chequea más tarde para verla publicada.";
 "label_remove" = "Quitar";
 "error_remove" = "Ha ocurrido un error";
 "message_success_remove" = "Los datos han sido removidos exitosamente";
 "title_share_story" = "Comparte historia usando:";
 "title_share_news" = "Comparte noticias usando:";
-"title_share_subject" = "Historia compartida usando U-Report";
-"story_share_info" = "Descarga la App de U-Report: http://goo.gl/Xxyodt";
+"title_share_subject" = "Historia compartida usando E-Report";
+"story_share_info" = "Descarga la App de E-Report: http://goo.gl/Xxyodt";
 "label_country_moderator" = "Moderadores de país";
 "message_success_user_update" = "Usuario actualizado exitosamente";
-"ureport_message_title" = "Mensaje U-Report";
+"ureport_message_title" = "Mensaje E-Report";
 "message_remove_chat_message" = "Seguro que quieres borrar este mensaje?";
 "message_delete_message_success" = "Tu mensaje ha sido borrado exitosamente!";
 "message_individual_chat_blocked" = "Esta habitación de chateo ha sido bloqueada por %@";

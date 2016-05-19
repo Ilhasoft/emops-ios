@@ -194,7 +194,7 @@ class URMyChatsIPadViewController: UISplitViewController, URMyChatsViewControlle
                                                               NSFontAttributeName:UIFont(name: "Avenir-Light", size: 20) as! AnyObject
         ]
         
-        navigationController.navigationBar.barTintColor = URCountryProgramManager.activeCountryProgram()?.themeColor
+        navigationController.navigationBar.barTintColor = URMissionManager.activeMission()?.themeColor
         navigationController.navigationBar.tintColor = UIColor.whiteColor()
         navigationController.navigationBar.translucent = true
     }

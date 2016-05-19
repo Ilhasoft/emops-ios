@@ -24,8 +24,8 @@ class URChatMemberManager: NSObject {
     
     class func save(chatMember:URChatMember, user:URUser?, completion:(Bool) -> Void) {
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.path())
             .childByAppendingPath(chatMember.key)
             .childByAppendingPath(user!.key)
@@ -42,8 +42,8 @@ class URChatMemberManager: NSObject {
     class func getByKey(key:String,completion:(FDataSnapshot?,Bool) -> Void){
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()?.code)
             .childByAppendingPath(self.path())
             .childByAppendingPath(key)
             .observeSingleEventOfType(FEventType.Value, withBlock: { snapshot in
@@ -58,8 +58,8 @@ class URChatMemberManager: NSObject {
     func getByChatRoom(key:String){
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()?.code)
             .childByAppendingPath(URChatMemberManager.path())
             .childByAppendingPath(key)
             .observeEventType(FEventType.ChildAdded, withBlock: { snapshot in
@@ -83,8 +83,8 @@ class URChatMemberManager: NSObject {
     class func removeMemberByChatRoomKey(memberKey:String,chatRoomKey:String) {
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()?.code)
             .childByAppendingPath(URChatMemberManager.path())
             .childByAppendingPath(chatRoomKey)
             .childByAppendingPath(memberKey)
@@ -108,8 +108,8 @@ class URChatMemberManager: NSObject {
     class func removeChatRoom(memberKey:String,chatRoomKey:String) {
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()?.code)
             .childByAppendingPath(URChatMemberManager.path())
             .childByAppendingPath(chatRoomKey)
             .removeValueWithCompletionBlock { (error:NSError!, firebase:Firebase!) -> Void in
@@ -126,8 +126,8 @@ class URChatMemberManager: NSObject {
                     })
                     
                     URFireBaseManager.sharedInstance()
-                        .childByAppendingPath(URCountryProgram.path())
-                        .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+                        .childByAppendingPath(URMission.path())
+                        .childByAppendingPath(URMissionManager.activeMission()?.code)
                         .childByAppendingPath(URChatMessageManager.path())
                         .childByAppendingPath(chatRoomKey)
                         .removeValueWithCompletionBlock { (error:NSError!, firebase:Firebase!) -> Void in
@@ -140,8 +140,8 @@ class URChatMemberManager: NSObject {
                     }
                     
                     URFireBaseManager.sharedInstance()
-                        .childByAppendingPath(URCountryProgram.path())
-                        .childByAppendingPath(URCountryProgramManager.activeCountryProgram()?.code)
+                        .childByAppendingPath(URMission.path())
+                        .childByAppendingPath(URMissionManager.activeMission()?.code)
                         .childByAppendingPath(URChatRoomManager.path())
                         .childByAppendingPath(chatRoomKey)
                         .removeValueWithCompletionBlock { (error:NSError!, firebase:Firebase!) -> Void in
@@ -160,8 +160,8 @@ class URChatMemberManager: NSObject {
     class func getChatMembersByChatRoomWithCompletion(key:String,completionWithUsers:([URUser]) -> Void){
         
         URFireBaseManager.sharedInstance()
-            .childByAppendingPath(URCountryProgram.path())
-            .childByAppendingPath(URCountryProgramManager.activeCountryProgram()!.code)
+            .childByAppendingPath(URMission.path())
+            .childByAppendingPath(URMissionManager.activeMission()!.code)
             .childByAppendingPath(self.path())
             .childByAppendingPath(key)
             .observeSingleEventOfType(FEventType.Value, withBlock: { snapshot in
