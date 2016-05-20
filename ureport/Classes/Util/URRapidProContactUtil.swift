@@ -98,7 +98,7 @@ class URRapidProContactUtil: NSObject {
                 let dateFormat = NSDateFormatter()
                 dateFormat.dateFormat = "MM/dd/yyyy"
                 
-                URRapidProContactUtil.rapidProUser.setValue(dateFormat.stringFromDate(registrationDate), forKey: "registration_date")
+//                URRapidProContactUtil.rapidProUser.setValue(dateFormat.stringFromDate(registrationDate), forKey: "registration_date")
                 completion(rootDicionary: rootDictionary)
             })
         }else{

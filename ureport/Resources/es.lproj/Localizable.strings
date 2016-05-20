@@ -29,7 +29,7 @@
 "error_valid_email" = "Escribir una dirección de correo válida";
 "label_home" = "Principal";
 "load_message_wait" = "Espera...";
-"main_stories" = "Historias";
+"main_stories" = "Reportes";
 "main_polls" = "Encuestas";
 "main_news_feed" = "Programar noticias";
 "main_menu_home" = "Principal";
@@ -81,12 +81,12 @@
 "label_profile" = "Perfil";
 "label_edit" = "Editar";
 "label_logout" = "Salir";
-"profile_my_stories" = "Mis historias";
+"profile_my_stories" = "Mis Reportes";
 "profile_answered_polls" = "Encuestas contestadas";
 "profile_ranking" = "Ranking";
-"list_stories_error" = "No has publicado historias";
+"list_stories_error" = "No has publicado Reportes";
 "profile_polls" = "Encuesta: %d";
-"profile_stories" = "Historias: %d$s";
+"profile_stories" = "Reportes: %d$s";
 "menu_points" = "Puntos: %d";
 "label_chat_groups" = "Grupos abiertos";
 "chat_groups_join" = "Unirse";
@@ -110,7 +110,7 @@
 "error_chat_create_individual" = "Ya tienes una habitación de chat con este usuario. No es posible duplicar.";
 "cancel_dialog_button" = "Cancelar";
 "label_action_notifications" = "Notificaciones";
-"about_content" = "E-Report es una herramienta gratis para la participación comunitaria, diseñada para abordar temas que le interesan a lxs jóvenes. Una vez que te registras pasas a ser un/a U-Reporter y puedes chatear con otrxs U-Reporters, contestar encuestas semanalmente, y enviar tus propias historias. Los resultados e ideas son luego compartidos con la comunidad de E-Report. Los temas de las encuestas incluyen HIV/Sida, brotes de enfermedades, paz, salud, educación, agua, higiene, empleo juvenil, y cualquiera que las personas quieran tratar. La información es después usada para conectar a las personas con sus representantes, mejorar los programas de UNICEF, y llamar la atención de los gobiernos, Naciones Unidas, organizaciones de la sociedad civil y autoridades en general, sobre temas de suma urgencia. Nuestro objetivo es que ellxs usen esta información. El registro es voluntario, y no hay costos asociados para lxs U-Reporters. Juntxs, lxs U-Reporters pueden crear cambios positivos internacionalmente, en su país, o comunidad.";
+"about_content" = "UNICEF's Office of Emergency Programmes (EMOPS) is the focal point for emergency assistance, humanitarian policies, staff security and support to UNICEF offices in the field, as well as strategic coordination with external humanitarian partners both within and outside the United Nations system. EMOPS thus leads efforts to ensure that UNICEF's role in complex emergencies and natural disasters is clearly defined, that the organisation is properly equipped to fulfill that role, and that all levels of the organization are prepared to deliver our mandate. It aims to strengthen the ability of the organization to respond during times of humanitarian crisis.\n\nEMOPS coordinates headquarters support to country and regional offices dealing with emergencies in terms of staffing, funding, donor relations, inter-agency issues or technical guidance. In addition, UNICEF's Operations Centre (OPSCEN) is a 24-hour, 7 days-a-week information gathering and dissemination hub within the Office of Emergency Programmes. The centre monitors humanitarian crises, political events and security-related incidents around the world with a view to ensuring the safety of staff, and providing both field offices and senior decision-makers with critical information related to humanitarian emergencies.\n\nUNICEF supports direct humanitarian action, emergency programmes and policies throughout all its Divisions and offices, but concentrates coordination within EMOPS: the Office of Emergency Programmes based in New York and Geneva.";
 "label_about_ureport" = "Acerca de E-Report";
 "about_subtitle" = "Tu voz\nImporta";
 "donation_subtitle" = "Cuando haces una donación";
@@ -221,7 +221,7 @@
 "title_poll_question_no_login" = "Necesitas registrarte para contestar encuestas";
 "label_last_polls" = "Resultado de encuestas anteriores";
 "choice_result_value" = "%d %%";
-"stories_moderation" = "Historias";
+"stories_moderation" = "Reportes";
 "label_moderation" = "Moderación";
 "title_moderation" = "%d moderación";
 "button_title_disapprove" = "Desaprobar";
@@ -249,7 +249,7 @@
 "message_confirm_unblock_user" = "Esta seguro que quieres desbloquear esta habitación de chat?";
 "message_user_blocked_by_other" = "El usuario %@ te ha bloqueado. Ya no pueden chatear.";
 "label_chat_invite" = "Chat";
-"label_view_stories" = "Historias";
+"label_view_stories" = "Reportes";
 "label_view_points" = "Puntos";
 "text_donate" = "Donar";
 "label_chat_picture_notification" = "Imagen";
@@ -310,8 +310,8 @@
 
 //TUTORIAL
 
-"tutorial_title1" = "Crea historias";
-"tutorial_description1" = "Amplifica tu voz y comparte lo que está pasando en tu comunidad creando y comentando historias.";
+"tutorial_title1" = "Crea Reportes";
+"tutorial_description1" = "Amplifica tu voz y comparte lo que está pasando en tu comunidad creando y comentando Reportes.";
 "tutorial_title2" = "Responde encuestas";
 "tutorial_description2" = "Semanalmente, y junto a millones de U-Reporters, contesta encuestas sobre temas que te impactan a ti y a tu comunidad. Los resultados serán compartidos.";
 "tutorial_title3" = "Chatea gratis";

@@ -9,7 +9,9 @@
 import UIKit
 
 protocol URMissionManagerDelegate {
-    func newMessionReceived(mission:URMission)
+    func newMissionReceived(mission:URMission)
+    func missionDidRemove(mission:URMission)
+    func missionDidChange(mission:URMission)
 }
 
 class URMissionManager: NSObject {
@@ -36,10 +38,36 @@ class URMissionManager: NSObject {
                     URMissionManager.missions.append(mission)
                     
                     if let delegate = self.delegate {
-                        delegate.newMessionReceived(mission)
+                        delegate.newMissionReceived(mission)
                     }
                 })
         
+    }
+    
+    func getRemovedMissions() {
+        URFireBaseManager.sharedInstance()
+            .childByAppendingPath(URInformation.path())
+            .observeEventType(FEventType.ChildRemoved, withBlock: { (snapshot) in
+                
+                let mission = URMission(code: snapshot.key, themeColor: URConstant.Color.PRIMARY, org: 0, name: (snapshot.value as! NSDictionary).objectForKey("name") as! String, twitter: nil, facebook: nil, rapidProHostAPI: URConstant.RapidPro.API_URL, ureportHostAPI: URConstant.RapidPro.API_NEWS, groupName: "U-Reporters")
+                
+                if let delegate = self.delegate {
+                    delegate.missionDidRemove(mission)
+                }
+            })
+    }
+    
+    func getChangedMissions() {
+        URFireBaseManager.sharedInstance()
+            .childByAppendingPath(URInformation.path())
+            .observeEventType(FEventType.ChildChanged, withBlock: { (snapshot) in
+                
+                let mission = URMission(code: snapshot.key, themeColor: URConstant.Color.PRIMARY, org: 0, name: (snapshot.value as! NSDictionary).objectForKey("name") as! String, twitter: nil, facebook: nil, rapidProHostAPI: URConstant.RapidPro.API_URL, ureportHostAPI: URConstant.RapidPro.API_NEWS, groupName: "U-Reporters")
+                
+                if let delegate = self.delegate {
+                    delegate.missionDidChange(mission)
+                }
+            })
     }
     
     class func getChannelOfMission(mission:URMission) -> String?{

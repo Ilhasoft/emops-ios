@@ -35,9 +35,7 @@ class URStoryManager: NSObject {
     }
     
     func getStories(storiesToModerate:Bool) {
-        
-        print(URMissionManager.activeMission()!.code)
-        
+                
         URFireBaseManager.sharedInstance()
             .childByAppendingPath(URMission.path())
             .childByAppendingPath(URMissionManager.activeMission()!.code)

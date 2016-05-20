@@ -6,7 +6,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="URStoryContributionViewController" customModule="ureport" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="URStoryContributionViewController" customModule="ereport" customModuleProvider="target">
             <connections>
                 <outlet property="btLike" destination="cle-8C-xYF" id="hNa-SU-v5C"/>
                 <outlet property="contentView" destination="S8F-vY-HqY" id="bEI-Td-EJC"/>
@@ -65,7 +65,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq6-Fr-tBQ">
-                                                    <rect key="frame" x="8" y="149" width="553.5" height="17"/>
+                                                    <rect key="frame" x="8" y="143" width="553.5" height="17"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASl-1m-a2G">
                                                             <rect key="frame" x="0.0" y="0.0" width="551.5" height="17"/>
@@ -99,20 +99,21 @@
                                                         <constraint firstAttribute="height" constant="18" id="yx4-6h-czf"/>
                                                     </constraints>
                                                 </imageView>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrL-VW-exU" customClass="ISScrollViewPage" customModule="ureport" customModuleProvider="target">
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrL-VW-exU" customClass="ISScrollViewPage" customModule="ereport" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="219" width="553.5" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="cIM-PF-e4Z"/>
                                                     </constraints>
                                                 </scrollView>
                                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cle-8C-xYF">
-                                                    <rect key="frame" x="11" y="174" width="100" height="28"/>
+                                                    <rect key="frame" x="8" y="174" width="100" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="74N-8b-WaX"/>
                                                         <constraint firstAttribute="width" constant="100" id="fWA-lM-4Ta"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <inset key="imageEdgeInsets" minX="-17" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="titleEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="-50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <state key="normal" title="34" image="likeBig">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -127,23 +128,23 @@
                                                 <constraint firstItem="ZrL-VW-exU" firstAttribute="top" secondItem="cle-8C-xYF" secondAttribute="bottom" constant="17" id="2Ij-hK-ERS"/>
                                                 <constraint firstItem="KqO-7n-4Ys" firstAttribute="leading" secondItem="WBR-hP-rCJ" secondAttribute="leading" constant="11" id="5Wm-T3-k0e"/>
                                                 <constraint firstItem="dq6-Fr-tBQ" firstAttribute="leading" secondItem="WBR-hP-rCJ" secondAttribute="leading" constant="8" id="8kK-cF-qn8"/>
-                                                <constraint firstItem="cle-8C-xYF" firstAttribute="top" secondItem="dq6-Fr-tBQ" secondAttribute="bottom" constant="8" id="8lX-rd-gsm"/>
+                                                <constraint firstItem="cle-8C-xYF" firstAttribute="top" secondItem="dq6-Fr-tBQ" secondAttribute="bottom" constant="14" id="8lX-rd-gsm"/>
                                                 <constraint firstItem="LZx-kE-KvH" firstAttribute="top" secondItem="2CP-1O-adY" secondAttribute="bottom" id="8mE-If-O9h"/>
                                                 <constraint firstAttribute="trailing" secondItem="dq6-Fr-tBQ" secondAttribute="trailing" constant="8" id="DUI-Bq-RY8"/>
                                                 <constraint firstItem="ZrL-VW-exU" firstAttribute="leading" secondItem="WBR-hP-rCJ" secondAttribute="leading" constant="8" id="EA0-x2-E7c"/>
                                                 <constraint firstAttribute="trailing" secondItem="2CP-1O-adY" secondAttribute="trailing" constant="8" id="HF5-Ae-paW"/>
                                                 <constraint firstItem="2CP-1O-adY" firstAttribute="top" secondItem="WBR-hP-rCJ" secondAttribute="top" constant="72" id="HQ1-PQ-VFo"/>
                                                 <constraint firstItem="KqO-7n-4Ys" firstAttribute="top" secondItem="2CP-1O-adY" secondAttribute="bottom" constant="12" id="JOD-mI-bWj"/>
-                                                <constraint firstItem="VkW-3R-c31" firstAttribute="top" secondItem="dq6-Fr-tBQ" secondAttribute="bottom" constant="17" id="PNq-ma-kft"/>
-                                                <constraint firstItem="dq6-Fr-tBQ" firstAttribute="top" secondItem="LZx-kE-KvH" secondAttribute="bottom" constant="10" id="Qsa-88-gaC"/>
-                                                <constraint firstItem="cle-8C-xYF" firstAttribute="top" secondItem="dq6-Fr-tBQ" secondAttribute="bottom" constant="8" id="Uni-0V-OcJ"/>
+                                                <constraint firstItem="VkW-3R-c31" firstAttribute="top" secondItem="dq6-Fr-tBQ" secondAttribute="bottom" constant="23" id="PNq-ma-kft"/>
+                                                <constraint firstItem="dq6-Fr-tBQ" firstAttribute="top" secondItem="LZx-kE-KvH" secondAttribute="bottom" constant="4" id="Qsa-88-gaC"/>
+                                                <constraint firstItem="cle-8C-xYF" firstAttribute="top" secondItem="dq6-Fr-tBQ" secondAttribute="bottom" constant="14" id="Uni-0V-OcJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="LZx-kE-KvH" secondAttribute="trailing" constant="8" id="Zq8-YM-NGX"/>
-                                                <constraint firstItem="VkW-3R-c31" firstAttribute="leading" secondItem="cle-8C-xYF" secondAttribute="trailing" constant="29" id="eNp-Uv-ArS"/>
+                                                <constraint firstItem="VkW-3R-c31" firstAttribute="leading" secondItem="cle-8C-xYF" secondAttribute="trailing" constant="32" id="eNp-Uv-ArS"/>
                                                 <constraint firstItem="LZx-kE-KvH" firstAttribute="leading" secondItem="KqO-7n-4Ys" secondAttribute="trailing" constant="10" id="hRM-kJ-dt2"/>
-                                                <constraint firstItem="qNY-T9-XCr" firstAttribute="top" secondItem="dq6-Fr-tBQ" secondAttribute="bottom" constant="12" id="kzB-Nv-Woq"/>
+                                                <constraint firstItem="qNY-T9-XCr" firstAttribute="top" secondItem="dq6-Fr-tBQ" secondAttribute="bottom" constant="18" id="kzB-Nv-Woq"/>
                                                 <constraint firstItem="qNY-T9-XCr" firstAttribute="leading" secondItem="VkW-3R-c31" secondAttribute="trailing" constant="8" id="mvV-N7-aQD"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZrL-VW-exU" secondAttribute="trailing" constant="8" id="s5f-gu-cMV"/>
-                                                <constraint firstItem="cle-8C-xYF" firstAttribute="leading" secondItem="WBR-hP-rCJ" secondAttribute="leading" constant="11" id="tco-va-Le4"/>
+                                                <constraint firstItem="cle-8C-xYF" firstAttribute="leading" secondItem="WBR-hP-rCJ" secondAttribute="leading" constant="8" id="tco-va-Le4"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -219,7 +220,7 @@
                                                 <constraint firstAttribute="height" constant="1" id="auh-u0-ljD"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1t-QD-CQ8" customClass="ISRoundedView" customModule="ureport" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1t-QD-CQ8" customClass="ISRoundedView" customModule="ereport" customModuleProvider="target">
                                             <rect key="frame" x="191" y="223" width="51" height="51"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_sem_comentarios" translatesAutoresizingMaskIntoConstraints="NO" id="G0w-xh-Es0">

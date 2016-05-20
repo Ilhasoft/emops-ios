@@ -38,7 +38,15 @@ class URMissionTableViewController: UITableViewController, URMissionManagerDeleg
     
     //MARK: URMissionManagerDelegate
     
-    func newMessionReceived(mission: URMission) {
+    func missionDidRemove(mission: URMission) {
+        
+    }
+    
+    func missionDidChange(mission: URMission) {
+        
+    }
+    
+    func newMissionReceived(mission: URMission) {
         missionList.append(mission)
         self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: missionList.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Fade)
     }
@@ -85,7 +93,7 @@ class URMissionTableViewController: UITableViewController, URMissionManagerDeleg
         let remove = UITableViewRowAction(style: .Normal, title: "label_remove".localized) { action, index in
             URMissionManager.removeMission(mission)
             self.missionList.removeAtIndex(indexPath.row)
-            self.tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: indexPath.row, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Middle)
+            self.tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: indexPath.row, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Bottom)
         }
         remove.backgroundColor = UIColor.redColor()
         

@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 
-class ISMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class ISMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, URMissionManagerDelegate {
     
     @IBOutlet weak var lbStoriesAndPolls: UILabel!
     @IBOutlet weak var lbPoints: UILabel!
@@ -24,8 +24,9 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
         
     var missionChanged:URMission!
     var user:URUser!
-    var appDelegate:AppDelegate!
     var menuList:[ISMenu] = []
+    var missionList:[URMission] = []
+    let missionManager = URMissionManager()
     
     var pickerMission:UIPickerView?
 //    let countries:[URCountry]? = URCountry.getCountries(URCountryCodeType.ISO3) as? [URCountry]
@@ -47,6 +48,7 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
         setupMenu()
         setupTableViewCell()
@@ -54,7 +56,11 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
         self.txtSwitchMission.tintColor = UIColor.clearColor()
         self.txtSwitchMission.textColor = URConstant.Color.PRIMARY
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardHideNotification(_:)), name:   UIKeyboardWillHideNotification, object: nil);
-        self.appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        
+        missionManager.delegate = self
+        missionManager.getAvailableMissions()
+        missionManager.getRemovedMissions()
+        missionManager.getChangedMissions()
     }    
 
     override func viewWillAppear(animated: Bool) {
@@ -143,6 +149,22 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+    //MARK: URMissionManagerDelegate
+    
+    func missionDidChange(mission: URMission) {
+        let index = missionList.indexOf({$0.code == mission.code})!
+        missionList.removeAtIndex(index)
+        missionList.insert(mission, atIndex: index)
+    }
+    
+    func newMissionReceived(mission: URMission) {
+        missionList.append(mission)
+    }
+    
+    func missionDidRemove(mission: URMission) {
+        missionList.removeAtIndex(missionList.indexOf({$0.code == mission.code})!)        
+    }
+    
     //MARK: TextFieldDelegate
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
@@ -156,15 +178,15 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return URMissionManager.missions.count
+        return missionList.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return URMissionManager.missions[row].name
+        return missionList[row].name
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        missionChanged = URMissionManager.missions[row]
+        missionChanged = missionList[row]
         txtSwitchMission.text = missionChanged.name!
     }
     
@@ -282,7 +304,7 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
     
     private func setupMenu() {
         
-        var menuItem1,menuItem2,menuItem3,menuItem4,menuItem5:ISMenu?
+        var menuItem1,menuItem2,menuItem3,menuItem5:ISMenu?
         
         menuItem1 = ISMenu()
         menuItem1?.title = URMenuItem.Main.rawValue.localized
@@ -302,12 +324,6 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
             menuItem3!.menuItem = .Moderation
             menuList.append(menuItem3!)
         }
-        
-        menuItem4 = ISMenu()
-        menuItem4?.title = URMenuItem.Settings.rawValue.localized
-        menuItem4!.menuItem = .Settings
-
-        menuList.append(menuItem4!)
         
         menuItem5 = ISMenu()
         menuItem5?.title = URMenuItem.Logout.rawValue.localized

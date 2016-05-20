@@ -29,7 +29,7 @@
 "error_valid_email" = "Insira um e-mail válido";
 "label_home" = "Principal";
 "load_message_wait" = "Aguarde...";
-"main_stories" = "Histórias";
+"main_stories" = "Relatos";
 "main_polls" = "Enquetes";
 "main_news_feed" = "Notícias";
 "main_menu_home" = "Principal";
@@ -41,8 +41,8 @@
 "base_menu_close_drawer" = "Fechar Menu";
 "stories_list_item_author" = "por %d";
 "stories_list_item_contributions" = "%d contribuições";
-"story_item_read_full_story" = "Leia a história completa";
-"label_new_story" = "Nova história";
+"story_item_read_full_story" = "Leia o Relato completo";
+"label_new_story" = "Novo Relato";
 "create_story_insert_cover" = "Insira uma imagem de capa";
 "create_story_insert_title" = "Insira um título";
 "create_story_insert_story_content" = "Nos diga o que está acontecendo";
@@ -55,8 +55,8 @@
 "action_title_publish" = "Publicar";
 "action_label_search" = "Buscar";
 "create_story_add_marker_title" = "Novo marcador";
-"label_story_view" = "Visualização de História";
-"story_view_contribute" = "Contribua com essa história";
+"label_story_view" = "Visualização de Relato";
+"story_view_contribute" = "Contribua com esse Relato";
 "story_contribution_add" = "Adicione uma contribuição";
 "polls_participate" = "Resposta";
 "polls_current" = "Enquete atual";
@@ -81,12 +81,12 @@
 "label_profile" = "Perfil";
 "label_edit" = "Editar";
 "label_logout" = "Logout";
-"profile_my_stories" = "Minhas histórias";
+"profile_my_stories" = "Meus Relatos";
 "profile_answered_polls" = "Enquetes respondidas";
 "profile_ranking" = "Ranking";
-"list_stories_error" = "Você não publicou nenhuma história até agora.";
+"list_stories_error" = "Você não publicou nenhuma Relato até agora.";
 "profile_polls" = "Enquetes: %d";
-"profile_stories" = "Histórias: %d";
+"profile_stories" = "Relatos: %d";
 "menu_points" = "Pontos: %d";
 "label_chat_groups" = "Grupos Abertos";
 "chat_groups_join" = "Entrar";
@@ -110,7 +110,7 @@
 "error_chat_create_individual" = "Você já possui uma sala de chat com este usuário. Não é possível duplicá-la.";
 "cancel_dialog_button" = "Cancelar";
 "label_action_notifications" = "Notificações";
-"about_content" = "E-Report é uma ferramenta grátis para participação da comunidade, modelada para identificar problemas que realmente importam. Uma vez que você se torna um U-Reporter, pode conversar com outros U-Reporters, enviar histórias e responder enquetes semanais. Resultados e ideias são compartilhados com a comunidade. Problemas questionados incluem saúde, educação, água, saneamento e higiene, desemprego dos jovens, HIV/AIDS, surtos de doenças e qualquer coisa que as pessoas queiram discutir.\n\nA informação é usada para conectar pessoas jovens com seus representantes,  melhorar programas da UNICEF e direcionar a atenção para questões urgentes com os governos nacionais e a ONU. ONGs, sociedade civil e líderes de países podem ver a informação em seu site para entender o que as pessoas querem ou precisam.\n\nO Registro é voluntário e U-Reporters não pagam nada por isso.\n\nJuntos U-Reporters criam mudanças positivas em suas comunidades, nação e internacionalmente.";
+"about_content" = "E-Report é uma ferramenta grátis para participação da comunidade, modelada para identificar problemas que realmente importam. Uma vez que você se torna um U-Reporter, pode conversar com outros U-Reporters, enviar relatos e responder enquetes semanais. Resultados e ideias são compartilhados com a comunidade. Problemas questionados incluem saúde, educação, água, saneamento e higiene, desemprego dos jovens, HIV/AIDS, surtos de doenças e qualquer coisa que as pessoas queiram discutir.\n\nA informação é usada para conectar pessoas jovens com seus representantes,  melhorar programas da UNICEF e direcionar a atenção para questões urgentes com os governos nacionais e a ONU. ONGs, sociedade civil e líderes de países podem ver a informação em seu site para entender o que as pessoas querem ou precisam.\n\nO Registro é voluntário e U-Reporters não pagam nada por isso.\n\nJuntos U-Reporters criam mudanças positivas em suas comunidades, nação e internacionalmente.";
 "label_about_ureport" = "Sobre o E-Report";
 "about_subtitle" = "Sua voz\nImporta";
 "donation_subtitle" = "Quando você faz \numa doação";
@@ -126,7 +126,7 @@
 "login_validation_error_message" = "Você precisa efetuar o login antes de executar esta ação!\nVocê quer fazer o login agora?";
 "label_chat" = "Chat";
 "login_forgot_password" = "Esqueceu a senha?";
-"story_item_contribute_to_story" = "Contribua com essa história";
+"story_item_contribute_to_story" = "Contribua com esse relato";
 "list_stories_header_title" = "Oi %@, nos diga o que está acontecendo";
 "main_menu_group_institutional" = "Institucional";
 "label_settings" = "Configurações";
@@ -154,7 +154,7 @@
 "caching_user_load_message" = "Salvando usuário...";
 "error_email_already_exists" = "Existe um usuário com esse email. Escolha outro!";
 "error_nickname_already_exists" = "Existe um usuário com o mesmo apelido. Escolha outro!";
-"publishing_story_load_message" = "Publicando história...";
+"publishing_story_load_message" = "Publicando Relato...";
 "load_message_publishing_contribution" = "Publicando contribuição...";
 "date_now" = "agora";
 "load_registering_user" = "Registrando usuário...";
@@ -221,19 +221,19 @@
 "title_poll_question_no_login" = "Você precisa fazer o login para responder enquetes";
 "label_last_polls" = "Resultados de enquetes anteriores";
 "choice_result_value" = "%d %%";
-"stories_moderation" = "Histórias";
+"stories_moderation" = "Relatos";
 "label_moderation" = "Moderação";
 "title_moderation" = "%d moderação";
 "button_title_disapprove" = "Desaprovar";
 "button_title_publish" = "Publicar";
-"success_story_update_message" = "História atualizada com sucesso!";
-"message_story_publish_warning" = "Sua história foi enviada para o time do E-Report. Verifique depois e veja se foi publicada!";
+"success_story_update_message" = "Relato atualizada com sucesso!";
+"message_story_publish_warning" = "Seu Relato foi enviada para o time do E-Report. Verifique depois e veja se foi publicada!";
 "label_remove" = "Remover";
 "error_remove" = "Ocorreu um erro durante o processo de remoção";
 "message_success_remove" = "Os dados foram removidos com sucesso!";
-"title_share_story" = "Compartilhe história usando:";
+"title_share_story" = "Compartilhe relato usando:";
 "title_share_news" = "Compartilhe notícia usando:";
-"title_share_subject" = "História compartilhada usando E-Report";
+"title_share_subject" = "Relato compartilhado usando E-Report";
 "story_share_info" = "Download E-Report: http://goo.gl/Xxyodt";
 "label_country_moderator" = "Moderadores de País";
 "message_success_user_update" = "Usuário foi atualizado com sucesso!";
@@ -249,12 +249,12 @@
 "message_confirm_unblock_user" = "Você realmente quer desbloquear essa sala de chat?";
 "message_user_blocked_by_other" = "O usuário %d bloqueou você. Você não pode conversar com ele.";
 "label_chat_invite" = "Chat";
-"label_view_stories" = "Histórias";
+"label_view_stories" = "Relatos";
 "label_view_points" = "Pontos";
 "text_donate" = "Doar";
 "label_chat_picture_notification" = "picture";
 "get_started_title" = "Começar";
-"ureport_contribution_notification_title" = "Nova contribuição na história";
+"ureport_contribution_notification_title" = "Nova contribuição no Relato";
 "title_tutorial" = "Uma vez que você registra e se torna um U-Reporter você pode:";
 "message_send_poll" = "Enviando resposta da enquete...";
 "message_response_sent" = "Resposta enviada com sucesso!";
@@ -264,7 +264,7 @@
 "hint_youtube_link" = "Link do Youtube";
 "error_video_load" = "Ocorreu um vídeo durante o carregamento do vídeo";
 "title_click_to_play" = "Clique para reproduzir";
-"message_story_disapproved" = "Essa história foi desaprovada com sucesso!";
+"message_story_disapproved" = "Esse Relato foi desaprovada com sucesso!";
 "title_chat_message" = "Nova mensagem de chat";
 "prompt_media_notification" = "media";
 "choose_camera" = "Escolher do álbum";
@@ -273,7 +273,7 @@
 "group_min_user" = "Um grupo deve ter no mínimo 2 pessoas";
 "feature_without_permission" = "Você não tem permissão para acessar este recurso.";
 "is_empty" = "%@ está vazio";
-"story_empty" = "Insira uma História";
+"story_empty" = "Insira um Relato";
 "login_password_error" = "Login/Password incorreto";
 "loading_states" = "Por favor espere, carregando estados...";
 "state" = "Estado";
@@ -305,12 +305,11 @@
 "new_mission_name" = "Nome da missão";
 "new_mission_code" = "Código da missão (exemplo: ABC)";
 "new_mission_code_min_alert" = "Insira um código de no mínimo 3 letras";
-"mission" = "Missão";
 
 //TUTORIAL
 
-"tutorial_title1" = "Criar Histórias";
-"tutorial_description1" = "Amplifique sua voz e compartilhe o que está acontecendo em sua comunidade criando histórias e contribuindo em outras.";
+"tutorial_title1" = "Criar Relatos";
+"tutorial_description1" = "Amplifique sua voz e compartilhe o que está acontecendo em sua comunidade criando Relatos e contribuindo em outras.";
 "tutorial_title2" = "Responder Enquetes";
 "tutorial_description2" = "Toda semana você e milhões de outros U-Reporters podem responder enquetes sobre questões que impactam pessoas jovens em sua comunidade. Resultados serão sempre compartilhados.";
 "tutorial_title3" = "Chat grátis";
