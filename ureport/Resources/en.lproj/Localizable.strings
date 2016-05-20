@@ -300,6 +300,11 @@
 "no_hardware_permission_camera" = "To complete this action please provide permission to access the camera";
 "no_hardware_permission_microphone" = "To complete this action please provide the microphone access permission";
 "no_hardware_permission_contact" = "To complete this action please provide permission to access the contact list";
+"new_mission_label" = "Create a new mission";
+"new_mission_name" = "Mission name";
+"new_mission_code" = "Mission code (example: ABC)";
+"new_mission_code_min_alert" = "Insert a code with at least 3 characters";
+"mission" = "Mission";
 
 //TUTORIAL
 

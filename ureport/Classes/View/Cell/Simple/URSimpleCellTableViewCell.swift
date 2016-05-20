@@ -21,7 +21,7 @@ class URSimpleCellTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        super.selectionStyle = UITableViewCellSelectionStyle.None
         // Configure the view for the selected state
     }
     

@@ -296,7 +296,7 @@ class ISMenuViewController: UIViewController, UITableViewDataSource, UITableView
         
         menuList.append(menuItem2!)
         
-        if URUser.activeUser() != nil && URUserManager.userHasPermissionToAccessTheFeature(true) == true {
+        if URUserManager.userHasPermissionToAccessTheFeature(true) == true {
             menuItem3 = ISMenu()
             menuItem3!.title = URMenuItem.Moderation.rawValue.localized
             menuItem3!.menuItem = .Moderation

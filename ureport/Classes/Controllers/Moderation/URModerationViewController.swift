@@ -66,9 +66,51 @@ class URModerationViewController: UITabBarController, UITabBarControllerDelegate
         
         if viewController is URMissionTableViewController {
             self.title = viewController.title
-            self.navigationItem.rightBarButtonItems = nil
+            self.navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(createMission))]
         }
         
     }
     
+    func createMission() {
+        let alertController = UIAlertController(title: nil, message: "new_mission_label".localized, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "new_mission_code".localized
+            textField.addTarget(self, action: #selector(self.alertTextFieldDidChange(_:)), forControlEvents: .EditingChanged)
+        }
+        alertController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "new_mission_name".localized
+            textField.addTarget(self, action: #selector(self.alertTextFieldDidChange(_:)), forControlEvents: .EditingChanged)
+        }
+        alertController.addAction(UIAlertAction(title: "cancel_dialog_button".localized, style: UIAlertActionStyle.Cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (alertAction) in
+            
+            let mission = URMission()
+            
+            let textFieldCode = alertController.textFields![0]
+            let textFieldName = alertController.textFields![1]
+            
+            mission.code = textFieldCode.text?.uppercaseString
+            mission.name = textFieldName.text
+            
+            alertAction.enabled = false
+            
+            URMissionManager.updateMission(mission, isNew: true, completion: {})
+        }))
+        
+        alertController.actions.last!.enabled = false
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    //MARK: TextFieldDelegate
+    
+    func alertTextFieldDidChange(sender: UITextField) {
+        let alertController = (self.presentedViewController as! UIAlertController)
+        let txtCode = alertController.textFields!.first
+        let txtName = alertController.textFields!.last
+        let okAction = alertController.actions.last
+        
+        okAction!.enabled = txtCode?.text?.characters.count >= 3 && txtName?.text?.characters.count >= 3
+
+    }
 }

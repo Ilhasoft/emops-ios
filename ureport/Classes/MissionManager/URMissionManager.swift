@@ -29,8 +29,8 @@ class URMissionManager: NSObject {
                     
                     let mission = URMission(code: snapshot.key, themeColor: URConstant.Color.PRIMARY, org: 0, name: (snapshot.value as! NSDictionary).objectForKey("name") as! String, twitter: nil, facebook: nil, rapidProHostAPI: URConstant.RapidPro.API_URL, ureportHostAPI: URConstant.RapidPro.API_NEWS, groupName: "U-Reporters")
                     
-                    if mission.code == "GLOBAL" && URMissionManager.missions.count == 1 {
-                        URMissionManager.missions.removeLast()
+                    if URMissionManager.missions.count == 1 && URMissionManager.missions[0].code == "GLOBAL" {
+                        URMissionManager.missions.removeFirst()
                     }
                     
                     URMissionManager.missions.append(mission)
@@ -179,6 +179,36 @@ class URMissionManager: NSObject {
             return nil
         }
         
+    }
+    
+    class func updateMission(mission:URMission,isNew:Bool,completion:() -> Void) {
+        URFireBaseManager.sharedInstance()
+            .childByAppendingPath(URInformation.path())
+            .childByAppendingPath(mission.code)
+            .childByAppendingPath("name")
+            .setValue(mission.name, withCompletionBlock: { (error:NSError!, firebase: Firebase!) -> Void in
+                if error != nil {
+                    print(error?.localizedDescription)
+                }else {
+                    if isNew == true {
+                        
+                    }
+                    completion()
+                }
+            })
+    }
+    
+    class func removeMission(mission:URMission) {
+        URFireBaseManager.sharedInstance()
+            .childByAppendingPath(URInformation.path())
+            .childByAppendingPath(mission.code)
+            .removeValueWithCompletionBlock { (error:NSError!, firebase:Firebase!) in
+                if error != nil {
+                    print(error?.localizedDescription)
+                }else{
+                    URMissionManager.missions.removeAtIndex(URMissionManager.missions.indexOf({$0.code == mission.code})!)
+                }
+        }
     }
     
 }
