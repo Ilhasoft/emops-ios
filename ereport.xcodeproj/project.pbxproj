@@ -107,6 +107,8 @@
 		656AACF11CEE714700426ADB /* URSimpleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656AACEF1CEE714700426ADB /* URSimpleCellTableViewCell.swift */; };
 		656AACF21CEE714700426ADB /* URSimpleCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656AACF01CEE714700426ADB /* URSimpleCellTableViewCell.xib */; };
 		656AACF51CEE739100426ADB /* URMissionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656AACF41CEE739100426ADB /* URMissionTableViewController.swift */; };
+		656AACFB1CEF651400426ADB /* ereport.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 656AACFA1CEF651400426ADB /* ereport.entitlements */; };
+		656AACFD1CEF653E00426ADB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656AACFC1CEF653E00426ADB /* CloudKit.framework */; };
 		657629161BE135010095772F /* URModerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657629151BE135010095772F /* URModerationViewController.swift */; };
 		657629191BE13A360095772F /* URModeratorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657629181BE13A360095772F /* URModeratorTableViewController.swift */; };
 		65780CB81C5FFF150025398D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65780CB71C5FFF150025398D /* MobileCoreServices.framework */; };
@@ -382,7 +384,6 @@
 		65609F141C714E130039A8AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		65609F151C71517B0039A8AB /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		65609F291C7266100039A8AB /* URPlayMediaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URPlayMediaView.swift; sourceTree = "<group>"; };
-		65609F2B1C72C1EA0039A8AB /* ureport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ureport.entitlements; sourceTree = "<group>"; };
 		656561F81BD58DD200EBA9BD /* URSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		656561F91BD58DD200EBA9BD /* URSettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = URSettingsTableViewCell.xib; sourceTree = "<group>"; };
 		656561FD1BD58E9600EBA9BD /* URSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URSettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -398,10 +399,11 @@
 		65685ADD1BA23C4C00099CFB /* URPollResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URPollResponse.swift; sourceTree = "<group>"; };
 		65685B4C1BA6686300099CFB /* URStoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URStoryManager.swift; sourceTree = "<group>"; };
 		656A2BE31B98C7780079BD6A /* URGCMManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URGCMManager.swift; sourceTree = "<group>"; };
-		656AACE91CEE675A00426ADB /* ereport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ereport.entitlements; sourceTree = "<group>"; };
 		656AACEF1CEE714700426ADB /* URSimpleCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URSimpleCellTableViewCell.swift; sourceTree = "<group>"; };
 		656AACF01CEE714700426ADB /* URSimpleCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = URSimpleCellTableViewCell.xib; sourceTree = "<group>"; };
 		656AACF41CEE739100426ADB /* URMissionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URMissionTableViewController.swift; sourceTree = "<group>"; };
+		656AACFA1CEF651400426ADB /* ereport.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ereport.entitlements; sourceTree = "<group>"; };
+		656AACFC1CEF653E00426ADB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		65711A2C1C40502500E05BBD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		657629151BE135010095772F /* URModerationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URModerationViewController.swift; sourceTree = "<group>"; };
 		657629181BE13A360095772F /* URModeratorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URModeratorTableViewController.swift; sourceTree = "<group>"; };
@@ -574,6 +576,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656AACFD1CEF653E00426ADB /* CloudKit.framework in Frameworks */,
 				65780CB81C5FFF150025398D /* MobileCoreServices.framework in Frameworks */,
 				658949D61B861B5E0087F361 /* Security.framework in Frameworks */,
 				658949D41B85775A0087F361 /* Accounts.framework in Frameworks */,
@@ -663,7 +666,6 @@
 		65409FB21B4C842700344D75 = {
 			isa = PBXGroup;
 			children = (
-				656AACE91CEE675A00426ADB /* ereport.entitlements */,
 				65409FF01B4C977600344D75 /* Foundation.framework */,
 				65409FBD1B4C842700344D75 /* ureport */,
 				65409FD31B4C842700344D75 /* ureportTests */,
@@ -685,7 +687,7 @@
 		65409FBD1B4C842700344D75 /* ureport */ = {
 			isa = PBXGroup;
 			children = (
-				65609F2B1C72C1EA0039A8AB /* ureport.entitlements */,
+				656AACFA1CEF651400426ADB /* ereport.entitlements */,
 				65409FE01B4C845200344D75 /* Classes */,
 				65409FEA1B4C845200344D75 /* Resources */,
 				65409FC01B4C842700344D75 /* AppDelegate.swift */,
@@ -1639,6 +1641,7 @@
 		765863F8BACD5E4ED452B82C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				656AACFC1CEF653E00426ADB /* CloudKit.framework */,
 				65780CB71C5FFF150025398D /* MobileCoreServices.framework */,
 				658949D51B861B5E0087F361 /* Security.framework */,
 				658949D31B85775A0087F361 /* Accounts.framework */,
@@ -1768,7 +1771,7 @@
 								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -1813,6 +1816,7 @@
 				65DFCCFF1CE2916500E4DFD9 /* URCurrentPollView.xib in Resources */,
 				9742494D1BFE0DE10024384E /* UROpenFieldResponseView.xib in Resources */,
 				658D14B01C99F482009A63A5 /* URAudioView.xib in Resources */,
+				656AACFB1CEF651400426ADB /* ereport.entitlements in Resources */,
 				6515FB7C1B881AE100CEEC3B /* Images.xcassets in Resources */,
 				658D857C1B5457CC00DFB949 /* URLoginCredentialsViewController.xib in Resources */,
 				658BD0321CEBB0540019E885 /* URPollResultViewController.xib in Resources */,
@@ -2248,6 +2252,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = ureport/ereport.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -2272,6 +2277,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = ureport/ereport.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
