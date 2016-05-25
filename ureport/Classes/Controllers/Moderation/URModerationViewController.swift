@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import QRCodeReader
+import AVFoundation
 
 class URModerationViewController: UITabBarController, UITabBarControllerDelegate {
 
     var appDelegate:AppDelegate!
     
+    lazy var readerVC = QRCodeReaderViewController(metadataObjectTypes: [AVMetadataObjectTypeQRCode])
     let storyViewController:URStoriesTableViewController = URStoriesTableViewController(filterStoriesToModerate: true)
     let moderatorViewController:URModeratorTableViewController = URModeratorTableViewController()
     let missionTableViewController:URMissionTableViewController = URMissionTableViewController()
@@ -29,6 +32,21 @@ class URModerationViewController: UITabBarController, UITabBarControllerDelegate
     }
 
     //MARK: Class Methods
+    
+    func openQRCodeReader() {
+        readerVC.completionBlock = { (result: QRCodeReaderResult?) in
+            
+            self.readerVC.dismissViewControllerAnimated(true, completion: { })
+            
+            if result != nil {
+                URBackendAuthManager.saveAuthToken(result!.value, completion: { (success) in
+                })
+            }
+        }
+        
+        readerVC.modalPresentationStyle = .FormSheet
+        self.presentViewController(readerVC, animated: true) { }
+    }
     
     func setupViewControllers() {
         
@@ -55,13 +73,17 @@ class URModerationViewController: UITabBarController, UITabBarControllerDelegate
     }
     
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+        
+        let qrCodeBarButton = UIBarButtonItem(image: UIImage(named: "ic_qrcode"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(openQRCodeReader))
+        
         if viewController is URStoriesTableViewController {
             self.title = viewController.title
+            self.navigationItem.rightBarButtonItems = [qrCodeBarButton]
         }
         
         if viewController is URModeratorTableViewController {
             self.title = viewController.title
-            self.navigationItem.rightBarButtonItems = nil
+            self.navigationItem.rightBarButtonItems = [qrCodeBarButton]
         }
         
         if viewController is URMissionTableViewController {
