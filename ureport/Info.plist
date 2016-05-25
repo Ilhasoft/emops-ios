@@ -58,10 +58,10 @@
 	<string>2</string>
 	<key>FacebookAppID</key>
 	<string>1078731758831595</string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>FacebookDisplayName</key>
 	<string>E-Report</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -84,6 +84,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>

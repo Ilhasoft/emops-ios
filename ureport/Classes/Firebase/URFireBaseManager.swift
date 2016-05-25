@@ -15,7 +15,7 @@ class URFireBaseManager: NSObject {
 //    static let Path = "https://e-report.firebaseio.com/"
 //    static let GCM_DEBUG_MODE = true
     
-    static let GCM_DEBUG_MODE = true
+    static let GCM_DEBUG_MODE = false
     static let Path = "https://e-report-dev.firebaseio.com/"
     static let Properties = "Key-debug"
     
