@@ -26,7 +26,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNX-Uu-LQL">
                     <rect key="frame" x="0.0" y="377" width="768" height="61"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-nk-U5u">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unicefLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-nk-U5u">
                             <rect key="frame" x="70" y="0.0" width="629" height="61"/>
                         </imageView>
                     </subviews>
@@ -478,6 +478,6 @@
         </view>
     </objects>
     <resources>
-        <image name="img_logo" width="181" height="61"/>
+        <image name="unicefLogo" width="226" height="53"/>
     </resources>
 </document>

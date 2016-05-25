@@ -108,7 +108,7 @@
 		656AACF21CEE714700426ADB /* URSimpleCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656AACF01CEE714700426ADB /* URSimpleCellTableViewCell.xib */; };
 		656AACF51CEE739100426ADB /* URMissionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656AACF41CEE739100426ADB /* URMissionTableViewController.swift */; };
 		656AACFB1CEF651400426ADB /* ereport.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 656AACFA1CEF651400426ADB /* ereport.entitlements */; };
-		656AACFD1CEF653E00426ADB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656AACFC1CEF653E00426ADB /* CloudKit.framework */; };
+		65745F4D1CF5EBC6001659E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65745F4C1CF5EBC6001659E2 /* CloudKit.framework */; };
 		657629161BE135010095772F /* URModerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657629151BE135010095772F /* URModerationViewController.swift */; };
 		657629191BE13A360095772F /* URModeratorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657629181BE13A360095772F /* URModeratorTableViewController.swift */; };
 		65780CB81C5FFF150025398D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65780CB71C5FFF150025398D /* MobileCoreServices.framework */; };
@@ -403,8 +403,8 @@
 		656AACF01CEE714700426ADB /* URSimpleCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = URSimpleCellTableViewCell.xib; sourceTree = "<group>"; };
 		656AACF41CEE739100426ADB /* URMissionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URMissionTableViewController.swift; sourceTree = "<group>"; };
 		656AACFA1CEF651400426ADB /* ereport.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ereport.entitlements; sourceTree = "<group>"; };
-		656AACFC1CEF653E00426ADB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		65711A2C1C40502500E05BBD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65745F4C1CF5EBC6001659E2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		657629151BE135010095772F /* URModerationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URModerationViewController.swift; sourceTree = "<group>"; };
 		657629181BE13A360095772F /* URModeratorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URModeratorTableViewController.swift; sourceTree = "<group>"; };
 		65780CB71C5FFF150025398D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -576,7 +576,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				656AACFD1CEF653E00426ADB /* CloudKit.framework in Frameworks */,
+				65745F4D1CF5EBC6001659E2 /* CloudKit.framework in Frameworks */,
 				65780CB81C5FFF150025398D /* MobileCoreServices.framework in Frameworks */,
 				658949D61B861B5E0087F361 /* Security.framework in Frameworks */,
 				658949D41B85775A0087F361 /* Accounts.framework in Frameworks */,
@@ -1641,7 +1641,7 @@
 		765863F8BACD5E4ED452B82C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				656AACFC1CEF653E00426ADB /* CloudKit.framework */,
+				65745F4C1CF5EBC6001659E2 /* CloudKit.framework */,
 				65780CB71C5FFF150025398D /* MobileCoreServices.framework */,
 				658949D51B861B5E0087F361 /* Security.framework */,
 				658949D31B85775A0087F361 /* Accounts.framework */,
@@ -2200,7 +2200,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "2df10446-3dd4-48ba-938c-fefcf694f7b0";
+				PROVISIONING_PROFILE = "82365ef2-d6f2-44df-bbf4-bd558cfe267d";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2239,7 +2239,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "2df10446-3dd4-48ba-938c-fefcf694f7b0";
+				PROVISIONING_PROFILE = "82365ef2-d6f2-44df-bbf4-bd558cfe267d";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

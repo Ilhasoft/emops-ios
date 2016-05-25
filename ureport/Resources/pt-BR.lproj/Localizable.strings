@@ -309,12 +309,13 @@
 
 //TUTORIAL
 
-"tutorial_title1" = "Criar Histórias";
-"tutorial_description1" = "Amplifique sua voz e compartilhe o que está acontecendo em sua comunidade criando histórias e contribuindo em outras.";
+"tutorial_title1" = "Relatos";
+"tutorial_description1" = "Amplifique sua voz e compartilhe o que está acontecendo em sua missão criando relatos e contribuindo em outraos.";
 "tutorial_title2" = "Responder Enquetes";
 "tutorial_description2" = "Toda semana você e milhões de outros U-Reporters podem responder enquetes sobre questões que impactam pessoas jovens em sua comunidade. Resultados serão sempre compartilhados.";
-"tutorial_title3" = "Chat grátis";
-"tutorial_description3" = "Chat com outros U-Reporters e siga grupos de chat sobre questões da juventude.";
+"tutorial_title3" = "Missões";
+"tutorial_description3" = "Acompanhe as missões ao redor do mundo e fique informado de todos novos relatos.";
+
 
 //MARKERS
 

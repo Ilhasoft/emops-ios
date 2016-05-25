@@ -308,12 +308,12 @@
 
 //TUTORIAL
 
-"tutorial_title1" = "Create Stories";
-"tutorial_description1" = "Amplify your voice and share what is happening in your community by creating stories and commenting on others.";
+"tutorial_title1" = "Reports";
+"tutorial_description1" = "Amplify your voice, talk about what's happening in your mission creating reports and contributing to reports of other users.";
 "tutorial_title2" = "Answer Polls";
-"tutorial_description2" = "Each week you and millions of other U‑Reporters can answer polls about issues impacting young people in your community. Results will always be shared.";
-"tutorial_title3" = "Chat for Free";
-"tutorial_description3" = "Chat with other U-Reporters and follow Group Chats around youth issues.";
+"tutorial_description2" = "Each week you and millions of other E‑Reporters can answer polls about issues impacting young people in your community. Results will always be shared.";
+"tutorial_title3" = "Missions";
+"tutorial_description3" = "Follow missions around the world and stay informed of all new reports.";
 
 //MARKERS
 

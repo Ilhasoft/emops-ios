@@ -310,12 +310,12 @@
 
 //TUTORIAL
 
-"tutorial_title1" = "Crea Reportes";
-"tutorial_description1" = "Amplifica tu voz y comparte lo que está pasando en tu comunidad creando y comentando Reportes.";
+"tutorial_title1" = "Informes";
+"tutorial_description1" = "Amplifica tu voz y comparte lo que está pasando en tu comunidad creando y comentando informes.";
 "tutorial_title2" = "Responde encuestas";
 "tutorial_description2" = "Semanalmente, y junto a millones de U-Reporters, contesta encuestas sobre temas que te impactan a ti y a tu comunidad. Los resultados serán compartidos.";
 "tutorial_title3" = "Chatea gratis";
-"tutorial_description3" = "Chatea con otrxs U-Reporters y sigue grupos que hablen sobre temas que te interesen.";
+"tutorial_description3" = "Siga misiones en todo el mundo y estar informado de todas los informes nuevas.";
 
 //MARKERS
 
