@@ -109,6 +109,7 @@
 		656AACF51CEE739100426ADB /* URMissionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656AACF41CEE739100426ADB /* URMissionTableViewController.swift */; };
 		656AACFB1CEF651400426ADB /* ereport.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 656AACFA1CEF651400426ADB /* ereport.entitlements */; };
 		65745F4D1CF5EBC6001659E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65745F4C1CF5EBC6001659E2 /* CloudKit.framework */; };
+		65745F501CF636DE001659E2 /* URBackendAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65745F4F1CF636DE001659E2 /* URBackendAuthManager.swift */; };
 		657629161BE135010095772F /* URModerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657629151BE135010095772F /* URModerationViewController.swift */; };
 		657629191BE13A360095772F /* URModeratorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657629181BE13A360095772F /* URModeratorTableViewController.swift */; };
 		65780CB81C5FFF150025398D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65780CB71C5FFF150025398D /* MobileCoreServices.framework */; };
@@ -266,7 +267,7 @@
 		97B2FAC61C061EC0000820BD /* URTutoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97B2FAC41C061EC0000820BD /* URTutoView.xib */; };
 		97FBAA571C0644120012D752 /* NSLocale+ISO639_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FBAA561C0644120012D752 /* NSLocale+ISO639_2.m */; };
 		97FBAA591C06447B0012D752 /* iso639_2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97FBAA581C06447B0012D752 /* iso639_2.bundle */; };
-		9B551E37C9944B5014019E9B /* Pods_ureport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CB42E22540D34F256E8133 /* Pods_ureport.framework */; };
+		C5C8BBD9EE53712F9F6C0C7C /* Pods_ereport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041D7DDC738B0153FDF13528 /* Pods_ereport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -293,9 +294,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		041D7DDC738B0153FDF13528 /* Pods_ereport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ereport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FEF00B55A801B024B760889 /* Pods-ureport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ureport.release.xcconfig"; path = "Pods/Target Support Files/Pods-ureport/Pods-ureport.release.xcconfig"; sourceTree = "<group>"; };
 		30D4A2F49216E9109C180A69 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CB42E22540D34F256E8133 /* Pods_ureport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ureport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		638C8BE521960DDAE8F318C8 /* Pods-ereport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ereport.release.xcconfig"; path = "Pods/Target Support Files/Pods-ereport/Pods-ereport.release.xcconfig"; sourceTree = "<group>"; };
 		65075AF01C7DF3C6008CF8F3 /* URDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URDownloader.swift; sourceTree = "<group>"; };
 		650A476C1CDF69ED00197241 /* URAboutViewIPadController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = URAboutViewIPadController.xib; sourceTree = "<group>"; };
 		6515FB781B881AE100CEEC3B /* LaunchImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchImages.xcassets; sourceTree = "<group>"; };
@@ -405,6 +408,7 @@
 		656AACFA1CEF651400426ADB /* ereport.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ereport.entitlements; sourceTree = "<group>"; };
 		65711A2C1C40502500E05BBD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		65745F4C1CF5EBC6001659E2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		65745F4F1CF636DE001659E2 /* URBackendAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URBackendAuthManager.swift; sourceTree = "<group>"; };
 		657629151BE135010095772F /* URModerationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URModerationViewController.swift; sourceTree = "<group>"; };
 		657629181BE13A360095772F /* URModeratorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URModeratorTableViewController.swift; sourceTree = "<group>"; };
 		65780CB71C5FFF150025398D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -533,6 +537,7 @@
 		65FAF0CD1BC2DA0000F8B380 /* URPointsScoredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = URPointsScoredViewController.xib; sourceTree = "<group>"; };
 		65FAF0D11BC41AF300F8B380 /* URGroupDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URGroupDetailsViewController.swift; sourceTree = "<group>"; };
 		65FAF0D21BC41AF300F8B380 /* URGroupDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = URGroupDetailsViewController.xib; sourceTree = "<group>"; };
+		76863AAD10B91B7F780C6418 /* Pods-ereport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ereport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ereport/Pods-ereport.debug.xcconfig"; sourceTree = "<group>"; };
 		7F64B916CA16088C64A94B74 /* Pods-ureport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ureport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ureport/Pods-ureport.debug.xcconfig"; sourceTree = "<group>"; };
 		9725C5951C0EAE1A00EE1237 /* URAlamofireLogExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URAlamofireLogExtension.swift; sourceTree = "<group>"; };
 		972817A81BFF9C3000FBD20E /* URChoiceResponseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = URChoiceResponseView.xib; path = ChoiceResponse/URChoiceResponseView.xib; sourceTree = "<group>"; };
@@ -582,7 +587,7 @@
 				658949D41B85775A0087F361 /* Accounts.framework in Frameworks */,
 				658949D21B8577530087F361 /* Social.framework in Frameworks */,
 				65409FF11B4C977600344D75 /* Foundation.framework in Frameworks */,
-				9B551E37C9944B5014019E9B /* Pods_ureport.framework in Frameworks */,
+				C5C8BBD9EE53712F9F6C0C7C /* Pods_ereport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +733,7 @@
 		65409FE01B4C845200344D75 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				65745F4E1CF636DE001659E2 /* BackendAuthManager */,
 				65D4C0A21CEE30B9004E84D7 /* MissionManager */,
 				65DFCCED1CE23F9400E4DFD9 /* ReviewMode */,
 				65816BAE1C750739004F9DEB /* AudioRecorderManager */,
@@ -1189,6 +1195,14 @@
 			path = Mission;
 			sourceTree = "<group>";
 		};
+		65745F4E1CF636DE001659E2 /* BackendAuthManager */ = {
+			isa = PBXGroup;
+			children = (
+				65745F4F1CF636DE001659E2 /* URBackendAuthManager.swift */,
+			);
+			path = BackendAuthManager;
+			sourceTree = "<group>";
+		};
 		657629141BE134EA0095772F /* Moderation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1648,6 +1662,7 @@
 				658949D11B8577530087F361 /* Social.framework */,
 				30D4A2F49216E9109C180A69 /* Pods.framework */,
 				48CB42E22540D34F256E8133 /* Pods_ureport.framework */,
+				041D7DDC738B0153FDF13528 /* Pods_ereport.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1705,6 +1720,8 @@
 			children = (
 				7F64B916CA16088C64A94B74 /* Pods-ureport.debug.xcconfig */,
 				1FEF00B55A801B024B760889 /* Pods-ureport.release.xcconfig */,
+				76863AAD10B91B7F780C6418 /* Pods-ereport.debug.xcconfig */,
+				638C8BE521960DDAE8F318C8 /* Pods-ereport.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1902,7 +1919,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ureport/Pods-ureport-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ereport/Pods-ereport-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		450D4BBB81DED4C784503883 /* 📦 Embed Pods Frameworks */ = {
@@ -1917,7 +1934,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ureport/Pods-ureport-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ereport/Pods-ereport-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		50C28071DEE32473E2626A8F /* 📦 Check Pods Manifest.lock */ = {
@@ -1951,6 +1968,7 @@
 				6540EA571CDBB66D006287D3 /* URMyChatsIPadViewController.swift in Sources */,
 				65409FC11B4C842700344D75 /* AppDelegate.swift in Sources */,
 				65EA8C181BAF4F7200F2E29E /* URLoginAlertController.swift in Sources */,
+				65745F501CF636DE001659E2 /* URBackendAuthManager.swift in Sources */,
 				65F077271CB5AA4700A1D608 /* URChatFileItem.swift in Sources */,
 				655690851B7D0F6700525E00 /* URPoll.swift in Sources */,
 				658949DA1B8623CF0087F361 /* TwitterAuthHelper.m in Sources */,
@@ -2248,7 +2266,7 @@
 		};
 		65409FDB1B4C842700344D75 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F64B916CA16088C64A94B74 /* Pods-ureport.debug.xcconfig */;
+			baseConfigurationReference = 76863AAD10B91B7F780C6418 /* Pods-ereport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -2273,7 +2291,7 @@
 		};
 		65409FDC1B4C842700344D75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FEF00B55A801B024B760889 /* Pods-ureport.release.xcconfig */;
+			baseConfigurationReference = 638C8BE521960DDAE8F318C8 /* Pods-ereport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

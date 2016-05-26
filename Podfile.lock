@@ -98,7 +98,7 @@ DEPENDENCIES:
   - JSQMessagesViewController
   - NYTPhotoViewer
   - Proposer
-  - QRCodeReader.swift
+  - QRCodeReader.swift (= 6.0.0)
   - SDWebImage
   - SwiftAddressBook
   - TPKeyboardAvoiding
@@ -154,6 +154,6 @@ SPEC CHECKSUMS:
   TPKeyboardAvoiding: f1ef0028fe9ba98ef2871cf55b4bbc39cae0267b
   youtube-ios-player-helper: 84b1485ebb4b7c6b619c6e05edcb55186723a7c6
 
-PODFILE CHECKSUM: 646c5b46634a3d0e290d7b9d1474d693e317869d
+PODFILE CHECKSUM: 0bfa0386ed88351b6f18b2a8be25c94d718dcd9a
 
 COCOAPODS: 1.0.0

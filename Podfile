@@ -2,7 +2,7 @@
 platform :ios, '8.0'
 use_frameworks!
 
-target "ureport" do
+target "ereport" do
 
 pod 'TPKeyboardAvoiding'
 pod 'Firebase', '>= 2.3.3'
