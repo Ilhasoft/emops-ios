@@ -274,7 +274,7 @@ class URRapidProManager: NSObject {
                     }else {
                         completion(states: nil,districts:nil)
                     }
-                   
+                    
                     
                 }else {
                     print(JSON.error)
@@ -284,7 +284,7 @@ class URRapidProManager: NSObject {
         }
     }
     
-    class func saveUser(user:URUser,country:URCountry,setupGroups:Bool,completion:(response:NSDictionary) -> Void) {
+    class func saveUser(user:URUser,country:URCountry,setupGroups:Bool,completion:(response:NSDictionary?) -> Void) {
         
         let headers = [
             "Authorization": URMissionManager.getToken()!
@@ -296,6 +296,7 @@ class URRapidProManager: NSObject {
                 
                 if JSON.isFailure == true {
                     print("error: \(JSON)")
+                    completion(response: nil)
                 }else{
                     completion(response: JSON.value as! NSDictionary)
                 }

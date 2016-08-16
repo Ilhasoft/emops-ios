@@ -11,13 +11,22 @@ import Firebase
 
 class URFireBaseManager: NSObject {
     
-//    static let Properties = "Key"
-//    static let Path = "https://e-report.firebaseio.com/"
-//    static let GCM_DEBUG_MODE = true
+    static let Properties = "Key"
+    //    static let Properties = "Key-debug"
+    static let Path = "https://e-report-dev.firebaseio.com/"
+    //    static let Path = "https://e-report.firebaseio.com/"
     
     static let GCM_DEBUG_MODE = false
-    static let Path = "https://e-report-dev.firebaseio.com/"
-    static let Properties = "Key-debug"
+    
+    //    Production
+    static let region = AWSRegionType.EUWest1
+    //    Debug
+    //    static let region = AWSRegionType.USEast1
+    
+    //    Production
+    static let credentialsProvider:AWSCredentialsProvider = AWSStaticCredentialsProvider(accessKey: URConstant.AWS.ACCESS_KEY(), secretKey: URConstant.AWS.ACCESS_SECRET())
+    //    Debug
+    //    static let credentialsProvider:AWSCredentialsProvider = AWSCognitoCredentialsProvider(regionType: region, identityPoolId: URConstant.AWS.COGNITO_IDENTITY_POLL_ID())
     
     static let Reference = Firebase(url: Path)
     

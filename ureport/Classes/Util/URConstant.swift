@@ -10,7 +10,7 @@ import UIKit
 
 struct URConstant {
    
-    static let keyPath = NSBundle.mainBundle().pathForResource("Key", ofType: "plist")
+    static let keyPath = NSBundle.mainBundle().pathForResource(URFireBaseManager.Properties, ofType: "plist")
     static let keyDictionary = NSDictionary(contentsOfFile: URConstant.keyPath!)
     
     static let isIpad = UIDevice.currentDevice().userInterfaceIdiom == .Pad
@@ -83,6 +83,30 @@ struct URConstant {
                     return dictionary["COGNITO_IDENTITY_POLL_ID"] as! String
                 }else{
                     print("COGNITO_IDENTITY_POLL_ID doesn't exists in key.plist")
+                }
+            }
+            return ""
+        }
+        
+        static func ACCESS_KEY() -> String {
+            
+            if let dictionary = keyDictionary {
+                if dictionary["S3_BUCKET_ACCESS_KEY"] != nil {
+                    return dictionary["S3_BUCKET_ACCESS_KEY"] as! String
+                }else{
+                    print("S3_BUCKET_ACCESS_KEY doesn't exists in key.plist")
+                }
+            }
+            return ""
+        }
+        
+        static func ACCESS_SECRET() -> String {
+            
+            if let dictionary = keyDictionary {
+                if dictionary["S3_BUCKET_ACCESS_SECRET"] != nil {
+                    return dictionary["S3_BUCKET_ACCESS_SECRET"] as! String
+                }else{
+                    print("S3_BUCKET_ACCESS_SECRET doesn't exists in key.plist")
                 }
             }
             return ""

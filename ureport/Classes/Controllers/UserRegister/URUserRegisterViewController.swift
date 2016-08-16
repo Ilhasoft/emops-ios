@@ -228,7 +228,6 @@ class URUserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPi
     }
     
     func showEmptyTextFieldAlert(textField:UITextField) {
-        print(textField.placeholder!)
         UIAlertView(title: nil, message: String(format: "is_empty".localized, arguments: [textField.placeholder!]), delegate: self, cancelButtonTitle: "OK").show()
     }
     
@@ -274,8 +273,10 @@ class URUserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPi
                 self.localizedGender = gender
                 
                 if gender == "Male" {
+                    self.gender = URGender.Male
                     self.txtGender.text = URGender.Male
                 }else{
+                    self.gender = URGender.Female
                     self.txtGender.text = URGender.Female
                 }
             }
@@ -370,7 +371,8 @@ class URUserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPi
                             self.setupFinishLoadingTextField(self.txtState, placeholder: "state".localized)
                         }
                         
-                        if data.value!.objectForKey("geonames") != nil {
+                        if data.value!.objectForKey("geonames") != nil && data.value!.objectForKey("totalResultsCount") as! Int > 0 {
+                            
                             for index in 0...data.value!.objectForKey("geonames")!.count-1 {
                                 let geoName:NSDictionary = data.value!.objectForKey("geonames")!.objectAtIndex(index) as! NSDictionary
                                 self.states.append(URState(name: geoName["adminName1"] as! String, boundary: nil))
@@ -412,7 +414,7 @@ class URUserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPi
         self.pickerDistricts = UIPickerView()
         
         self.pickerDate!.datePickerMode = UIDatePickerMode.Date
-        self.pickerDate!.addTarget(self, action: Selector("dateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        self.pickerDate!.addTarget(self, action: #selector(dateChanged), forControlEvents: UIControlEvents.ValueChanged)
         self.txtBirthDay.inputView = self.pickerDate!
         
         self.pickerGender!.dataSource = self

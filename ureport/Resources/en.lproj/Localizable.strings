@@ -300,11 +300,15 @@
 "no_hardware_permission_camera" = "To complete this action please provide permission to access the camera";
 "no_hardware_permission_microphone" = "To complete this action please provide the microphone access permission";
 "no_hardware_permission_contact" = "To complete this action please provide permission to access the contact list";
+<<<<<<< HEAD
 "new_mission_label" = "Create a new mission";
 "new_mission_name" = "Mission name";
 "new_mission_code" = "Mission code (example: ABC)";
 "new_mission_code_min_alert" = "Insert a code with at least 3 characters";
 "mission" = "Mission";
+=======
+"twitter_error_message" = "To login with Twitter, add an account before the settings of your iPhone.";
+>>>>>>> 3142c5215184daaf6de4218b09e6a122620abc63
 
 //TUTORIAL
 
